@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Manfred Rosenboom (maroph)">
+        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/info/about.html">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Über - openHPI Kurs Linux in der Kommandozeile</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">openHPI Kurs Linux in der Kommandozeile</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Woche <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../woche1/index.html" class="dropdown-item">Woche1</a>
+</li>
+                                    
+<li>
+    <a href="../woche2/index.html" class="dropdown-item">Woche2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="about.html" class="dropdown-item active">Über</a>
+</li>
+                                    
+<li>
+    <a href="license.html" class="dropdown-item">Lizenz</a>
+</li>
+                                    
+<li>
+    <a href="sources.html" class="dropdown-item">Quellen</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../woche2/index.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="license.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/info/about.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#uber-diese-site" class="nav-link">Über diese Site</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#struktur-der-site" class="nav-link">Struktur der Site</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mkdocs-virtual-environment" class="nav-link">MkDocs Virtual Environment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lokale-erzeugung-der-site" class="nav-link">Lokale Erzeugung der Site</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#veroffentlichung-der-site" class="nav-link">Veröffentlichung der Site</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="uber-diese-site">Über diese Site</h1>
+<p>Der gesamte Inhalt dieser Site (HTML und Skripte) ist abgelegt in meinem
+GitHub Repository
+<a href="https://github.com/maroph/openhpi_linux-cli_2022/">openhpi_linux-cli_2022</a>.</p>
+<h2 id="struktur-der-site">Struktur der Site</h2>
+<ul>
+<li>docs<br />
+  Inhalt dieser Site</li>
+<li>docs-src<br />
+  Markdown Sourcen dieser Site</li>
+<li>LICENSE<br />
+  Lizenz des Repositories (CC-BY 4.0)</li>
+<li>README.md<br />
+  Readme Datei des Repositories</li>
+<li>mkdocs.yml<br />
+<a href="https://www.mkdocs.org/">MkDocs</a> Konfigurationsdatei</li>
+</ul>
+<h2 id="mkdocs-virtual-environment">MkDocs Virtual Environment</h2>
+<p>Für MkDocs verwende ich das folgende Virtual Environment:</p>
+<pre><code class="language-bash">python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install --upgrade setuptools
+python -m pip install --upgrade wheel
+python -m pip install --upgrade mkdocs
+</code></pre>
+<p>Sollte das Modul venv nicht installiert sein, muss man das Package python3-venv
+installieren.</p>
+<p>Auf Debian/Ubuntu/Raspbian geht das mit dem folgenden Kommando</p>
+<pre><code>sudo apt install python3-venv
+</code></pre>
+<h2 id="lokale-erzeugung-der-site">Lokale Erzeugung der Site</h2>
+<pre><code>./build
+</code></pre>
+<h2 id="veroffentlichung-der-site">Veröffentlichung der Site</h2>
+<p>Für mein GitHub Repository 
+<a href="https://github.com/maroph/openhpi_linux-cli_2022/">openhpi_linux-cli_2022</a>
+habe ich die GitHub Page </p>
+<p><a href="https://maroph.github.io/openhpi_linux-cli_2022/">https://maroph.github.io/openhpi_linux-cli_2022/</a></p>
+<p>konfiguriert. Für diese GitHub Page werden die Daten aus dem Verzeichnis docs 
+im Branch main verwendet.</p>
+<p>Um diese Page zu aktualisieren, muss man die Änderungen im lokalen Git Repository
+committen und in das GitHub Repository pushen:</p>
+<pre><code>git commit -m "my commit message"
+git push
+</code></pre>
+<p>Nach einer relativ kurzen Zeit sind die Änderungen auf der GitHub Page zu sehen.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright (c) 2022 <a href="https://github.com/maroph">Manfred Rosenboom (maroph)</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

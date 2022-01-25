@@ -1,0 +1,38 @@
+site_name: openHPI Kurs Linux in der Kommandozeile
+site_url: https://maroph.github.io/openhpi_linux-cli_2022/
+site_description: Meine Begleitseite zu dem openHPI Linux CLI Kurs
+site_author: Manfred Rosenboom (maroph)
+
+repo_name: GitHub
+repo_url: https://github.com/maroph/openhpi_linux-cli_2022/
+edit_uri: "blob/main/docs-src"
+
+theme:
+    name: mkdocs
+    highlightjs: true
+    hljs_style: github
+    nav_style: dark
+    navigation_depth: 2
+
+nav:
+    - Home: index.md
+    - Woche:
+        - Woche1: woche1/index.md
+        - Woche2: woche2/index.md
+    - Info:
+        - Über: info/about.md
+        - Lizenz: info/license.md
+        - Quellen: info/sources.md
+
+docs_dir: docs-src
+site_dir: docs
+
+use_directory_urls: false
+strict: true
+
+copyright: Copyright (c) 2022 <a href="https://github.com/maroph">Manfred Rosenboom (maroph)</a>
+
+plugins:
+    - search:
+        min_search_length: 3
+
