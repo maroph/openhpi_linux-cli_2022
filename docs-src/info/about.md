@@ -3,10 +3,32 @@ Der gesamte Inhalt dieser Site (HTML und Skripte) ist abgelegt in meinem
 GitHub Repository
 [openhpi_linux-cli_2022](https://github.com/maroph/openhpi_linux-cli_2022/).
 
+## Benutzte Linux Versionen
+Für meine Beispiele habe ich die folgenden Linux Versionen benutzt:
+
+**Debian 10.13 (Raspberry Pi OS)**
+```bash
+echo $BASH_VERSION
+5.0.3(1)-release
+```
+
+**Debian 11.2**
+```bash
+echo $BASH_VERSION
+5.1.4(1)-release
+```
+
+### Testumgebungen
+
+- Debian 11 Virtual Machine (Virtualbox)
+- Raspberry Pi OS
+- WSL (Windows Subsystem for Linux)
+
 ## Struktur der Site
+Die Daten auf dieser Site sind folgendermaßen strukturiert:
 
 * docs  
-  Inhalt dieser Site
+  Inhalt dieser [Site](https://maroph.github.io/openhpi_linux-cli_2022/)
 * docs-src  
   Markdown Sourcen dieser Site
 * LICENSE  

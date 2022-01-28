@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Manfred Rosenboom (maroph)">
-        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/info/license.html">
+        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/bash_arrays.html">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Lizenz - openHPI Linux CLI</title>
+        <title>Bash Array - openHPI Linux CLI</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -82,33 +82,33 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Samples <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../samples/bash_arrays.html" class="dropdown-item">Bash Array</a>
+    <a href="bash_arrays.html" class="dropdown-item active">Bash Array</a>
 </li>
                                     
 <li>
-    <a href="../samples/bash_assoziative_arrays.html" class="dropdown-item">Bash Assoziatives Array</a>
+    <a href="bash_assoziative_arrays.html" class="dropdown-item">Bash Assoziatives Array</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="about.html" class="dropdown-item">Über</a>
+    <a href="../info/about.html" class="dropdown-item">Über</a>
 </li>
                                     
 <li>
-    <a href="license.html" class="dropdown-item active">Lizenz</a>
+    <a href="../info/license.html" class="dropdown-item">Lizenz</a>
 </li>
                                     
 <li>
-    <a href="sources.html" class="dropdown-item">Quellen</a>
+    <a href="../info/sources.html" class="dropdown-item">Quellen</a>
 </li>
                                 </ul>
                             </li>
@@ -121,17 +121,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="about.html" class="nav-link">
+                                <a rel="prev" href="../woche2/index.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="sources.html" class="nav-link">
+                                <a rel="next" href="bash_assoziative_arrays.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/info/license.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/bash_arrays.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -151,8 +151,72 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#lizenz" class="nav-link">Lizenz</a>
+            <li class="nav-item" data-level="1"><a href="#bash-arrays" class="nav-link">Bash: Arrays</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#anlegen-eines-arrays" class="nav-link">Anlegen eines Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#werte-an-ein-array-anhangen" class="nav-link">Werte an ein Array anhängen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#zugriff-auf-ein-element-mit-index" class="nav-link">Zugriff auf ein Element mit Index</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#einer-wert-mit-index-setzen" class="nav-link">Einer Wert mit Index setzen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lange-eines-arrays" class="nav-link">Länge eines Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#array-kopieren" class="nav-link">Array kopieren</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#array-konkatenieren" class="nav-link">Array konkatenieren</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#teilbereich-vonbis-eines-arrays-ausgeben" class="nav-link">Teilbereich (von/bis) eines Arrays ausgeben</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ausgabe-des-gesamten-arrays" class="nav-link">Ausgabe des gesamten Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#werte-bei-der-ausgabe-ersetzen" class="nav-link">Werte bei der Ausgabe ersetzen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#iteration-uber-ein-array" class="nav-link">Iteration über ein Array</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#prufen-ob-ein-wert-im-array-enthalten-ist" class="nav-link">Prüfen, ob ein Wert im Array enthalten ist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#prufen-ob-ein-wert-nicht-im-array-enthalten-ist" class="nav-link">Prüfen, ob ein Wert nicht im Array enthalten ist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#loschen-eines-elementes-aus-einem-array" class="nav-link">Löschen eines Elementes aus einem Array</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#loschen-eines-arrays" class="nav-link">Löschen eines Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#zeilenweises-einlesen-einer-datei-in-ein-array" class="nav-link">Zeilenweises Einlesen einer Datei in ein Array</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -160,15 +224,98 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="lizenz">Lizenz</h1>
-<p><img alt="CC-BY 4.0" src="../assets/cc-by_88x31.png" /><br />
-Die Daten auf dieser Site sind lizenziert unter einer
-<a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a></p>
+<h1 id="bash-arrays">Bash: Arrays</h1>
+<h2 id="anlegen-eines-arrays">Anlegen eines Arrays</h2>
+<h3 id="anlegen-eines-leeren-arrays">Anlegen eines leeren Arrays</h3>
+<pre><code class="language-bash">declare -a array
+</code></pre>
+<h3 id="anlegen-eines-vorbelegten-arrays">"Anlegen eines vorbelegten Arrays</h3>
+<pre><code class="language-bash">declare -a arrayPre=(wert1 wert2 wert3 wert4)
+</code></pre>
+<h2 id="werte-an-ein-array-anhangen">Werte an ein Array anhängen</h2>
+<pre><code class="language-bash">array+=(&quot;wert1&quot;)
+array+=(&quot;wert2&quot;)
+array+=(&quot;wert3&quot;)
+array+=(&quot;wert4&quot;)
+</code></pre>
+<h2 id="zugriff-auf-ein-element-mit-index">Zugriff auf ein Element mit Index</h2>
+<p>Das erste Element in einem Bash Array hat den Index 0.</p>
+<pre><code class="language-bash">echo &quot;${array[0]}&quot;
+echo &quot;${array[1]}&quot;
+</code></pre>
+<h2 id="einer-wert-mit-index-setzen">Einer Wert mit Index setzen</h2>
+<pre><code class="language-bash">array[1]=&quot;wert2_neu&quot;
+echo &quot;${array[1]}&quot;
+</code></pre>
+<pre><code class="language-bash">array[5]=&quot;wert5&quot;
+echo &quot;${array[5]}&quot;
+</code></pre>
+<p>Was ist der Wert vom Element mit dem nicht belegtem Index 4 ?</p>
+<pre><code class="language-bash">echo &quot;${array[4]}&quot;
+</code></pre>
+<p>Da dem Array mit dem Index 4 noch kein Wert zugewiesen wurde, wird der Ausdruck
+<em>${array[4]}</em> zu einem Leerstring expandiert</p>
+<h2 id="lange-eines-arrays">Länge eines Arrays</h2>
+<pre><code class="language-bash">echo &quot;Länge des Arrays array    : ${#array[@]}&quot;
+echo &quot;Länge des Arrays arrayPre : ${#arrayPre[@]}&quot;
+</code></pre>
+<h2 id="array-kopieren">Array kopieren</h2>
+<pre><code class="language-bash">array2=(&quot;${array[@]}&quot;)
+</code></pre>
+<h2 id="array-konkatenieren">Array konkatenieren</h2>
+<pre><code class="language-bash">array3=(&quot;${array[@]}&quot; &quot;${array2[@]}&quot;)
+</code></pre>
+<h2 id="teilbereich-vonbis-eines-arrays-ausgeben">Teilbereich (von/bis) eines Arrays ausgeben</h2>
+<pre><code class="language-bash">echo &quot;${array[@]:1:4}&quot;
+</code></pre>
+<p>Es werden die Werte mit dem Index 1-3 ausgegeben.
+Der erste Wert (1) gibt an, ab welchem Index die Ausgabe bebinnt und der zweite
+Wert (4) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll.</p>
+<h2 id="ausgabe-des-gesamten-arrays">Ausgabe des gesamten Arrays</h2>
+<pre><code class="language-bash">echo &quot;${array[@]}&quot;
+</code></pre>
+<h2 id="werte-bei-der-ausgabe-ersetzen">Werte bei der Ausgabe ersetzen</h2>
+<pre><code class="language-bash">echo &quot;${array[@]/wert/value}&quot;
+</code></pre>
+<p>Dieser Ausdruck gibt alle Werte des Array aus. Dabei wird der String "wert" durch den
+String "value" ersetzt.</p>
+<h2 id="iteration-uber-ein-array">Iteration über ein Array</h2>
+<pre><code class="language-bash">for wert in &quot;${array[@]}&quot;
+do
+    echo &quot;Wert : ${wert}&quot;
+done
+</code></pre>
+<h2 id="prufen-ob-ein-wert-im-array-enthalten-ist">Prüfen, ob ein Wert im Array enthalten ist</h2>
+<pre><code class="language-bash">if [[ &quot; ${array[@]} &quot; =~ &quot; wert1 &quot; ]]
+then
+    echo &quot;der Wert wert1 ist im Array array enthalten&quot;
+fi
+</code></pre>
+<h2 id="prufen-ob-ein-wert-nicht-im-array-enthalten-ist">Prüfen, ob ein Wert nicht im Array enthalten ist</h2>
+<pre><code class="language-bash">if [[ ! &quot; ${array[@]} &quot; =~ &quot; wertNONE &quot; ]]
+then
+    echo &quot;der Wert wertNone ist im Array array NICHT enthalten&quot;
+fi
+</code></pre>
+<h2 id="loschen-eines-elementes-aus-einem-array">Löschen eines Elementes aus einem Array</h2>
+<pre><code class="language-bash">unset array[5]
+</code></pre>
+<h2 id="loschen-eines-arrays">Löschen eines Arrays</h2>
+<p>unset array</p>
+<h2 id="zeilenweises-einlesen-einer-datei-in-ein-array">Zeilenweises Einlesen einer Datei in ein Array</h2>
+<p>Diesen Code habe ich in der
+<a href="https://mywiki.wooledge.org/BashFAQ/005">BashFAQ/005</a>
+im Kapitel "2.1. Loading lines from a file or stream" gefunden.</p>
+<pre><code class="language-bash">mapfile -t array &lt; ./tmp.txt
+echo &quot;Anzahl gelesener Zeilen: \${#array[@]}: ${#array[@]}&quot;
+for line in &quot;${array[@]}&quot;
+do
+    echo &quot;&gt;&gt;&gt;&gt;&gt; ${line}&quot;
+done
+</code></pre>
 <hr />
-<p><img alt="CC-BY-NC-SA 4.0" src="../assets/cc-by-nc-sa_88x31.png" /><br />
-Die Inhalte des openHPI Linux Kurses wurden vom
-<a href="https://open.hpi.de/">openHPI</a> Kurs Team erstellt und sind lizenziert unter einer
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a></p></div>
+<p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
+<a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/samples/bash_arrays.bash">bash_arrays.bash</a></p></div>
             </div>
         </div>
 

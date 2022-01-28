@@ -49,6 +49,52 @@
 </li>
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Links <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Bash</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://www.gnu.org/software/bash/manual/html_node/index.html" class="dropdown-item">Bash Reference Manual</a>
+</li>
+            
+<li>
+    <a href="https://openbook.rheinwerk-verlag.de/linux/linux_kap11_001.html" class="dropdown-item">Rheinwerk Linux</a>
+</li>
+            
+<li>
+    <a href="https://www.selflinux.org/selflinux/pdf/shellprogrammierung.pdf" class="dropdown-item">SelfLinux</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://openbook.rheinwerk-verlag.de/linux/index.html" class="dropdown-item">Rheinwerk Linux</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Samples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../samples/bash_arrays.html" class="dropdown-item">Bash Array</a>
+</li>
+                                    
+<li>
+    <a href="../samples/bash_assoziative_arrays.html" class="dropdown-item">Bash Assoziatives Array</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -75,7 +121,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../woche2/index.html" class="nav-link">
+                                <a rel="prev" href="../samples/bash_assoziative_arrays.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -107,6 +153,10 @@
             
             <li class="nav-item" data-level="1"><a href="#uber-diese-site" class="nav-link">Über diese Site</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#benutzte-linux-versionen" class="nav-link">Benutzte Linux Versionen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#struktur-der-site" class="nav-link">Struktur der Site</a>
               <ul class="nav flex-column">
               </ul>
@@ -134,10 +184,27 @@
 <p>Der gesamte Inhalt dieser Site (HTML und Skripte) ist abgelegt in meinem
 GitHub Repository
 <a href="https://github.com/maroph/openhpi_linux-cli_2022/">openhpi_linux-cli_2022</a>.</p>
+<h2 id="benutzte-linux-versionen">Benutzte Linux Versionen</h2>
+<p>Für meine Beispiele habe ich die folgenden Linux Versionen benutzt:</p>
+<p><strong>Debian 10.13 (Raspberry Pi OS)</strong></p>
+<pre><code class="language-bash">echo $BASH_VERSION
+5.0.3(1)-release
+</code></pre>
+<p><strong>Debian 11.2</strong></p>
+<pre><code class="language-bash">echo $BASH_VERSION
+5.1.4(1)-release
+</code></pre>
+<h3 id="testumgebungen">Testumgebungen</h3>
+<ul>
+<li>Debian 11 Virtual Machine (Virtualbox)</li>
+<li>Raspberry Pi OS</li>
+<li>WSL (Windows Subsystem for Linux)</li>
+</ul>
 <h2 id="struktur-der-site">Struktur der Site</h2>
+<p>Die Daten auf dieser Site sind folgendermaßen strukturiert:</p>
 <ul>
 <li>docs<br />
-  Inhalt dieser Site</li>
+  Inhalt dieser <a href="https://maroph.github.io/openhpi_linux-cli_2022/">Site</a></li>
 <li>docs-src<br />
   Markdown Sourcen dieser Site</li>
 <li>LICENSE<br />

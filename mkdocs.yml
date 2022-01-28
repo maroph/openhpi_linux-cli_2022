@@ -1,6 +1,6 @@
 site_name: openHPI Linux CLI
 site_url: https://maroph.github.io/openhpi_linux-cli_2022/
-site_description: Meine Begleitseite zu dem openHPI Linux CLI Kurs
+site_description: Meine Begleitseite zum openHPI Linux CLI Kurs
 site_author: Manfred Rosenboom (maroph)
 
 repo_name: GitHub
@@ -19,6 +19,16 @@ nav:
     - Woche:
         - Woche1: woche1/index.md
         - Woche2: woche2/index.md
+    - Links:
+        - Bash:
+            - Bash Reference Manual: https://www.gnu.org/software/bash/manual/html_node/index.html
+            - Rheinwerk Linux: https://openbook.rheinwerk-verlag.de/linux/linux_kap11_001.html
+            - SelfLinux: https://www.selflinux.org/selflinux/pdf/shellprogrammierung.pdf
+        - Linux:
+            - Rheinwerk Linux: https://openbook.rheinwerk-verlag.de/linux/index.html
+    - Samples:
+        - Bash Array: samples/bash_arrays.md
+        - Bash Assoziatives Array: samples/bash_assoziative_arrays.md
     - Info:
         - Über: info/about.md
         - Lizenz: info/license.md
