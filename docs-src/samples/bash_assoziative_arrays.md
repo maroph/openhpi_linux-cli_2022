@@ -74,4 +74,5 @@ unset aArray
 ---
 
 Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
-[bash_aArrays.bash](https://github.com/maroph/openhpi_linux-cli_2022/blob/main/samples/bash_aArrays.bash)
+[bash_aArrays.bash](https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/bash_aArrays.bash)
+
