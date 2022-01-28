@@ -7,7 +7,7 @@
 declare -a array
 ```
 
-### "Anlegen eines vorbelegten Arrays
+### Anlegen eines vorbelegten Arrays
 ```bash
 declare -a arrayPre=(wert1 wert2 wert3 wert4)
 ```

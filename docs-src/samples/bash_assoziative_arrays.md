@@ -18,7 +18,7 @@ aArray["key1"]="value1"
 aArray["key2"]="value2"
 ```
 
-## "Zugriff auf ein Element mit dem Schlüssel (key)
+## Zugriff auf ein Element mit dem Schlüssel (key)
 ```bash
 echo "${aArray["key1"]}"
 echo "${aArray["key2"]}"
@@ -67,7 +67,7 @@ fi
 unset aArray[key1]
 ```
 
-## "Löschen eines Arrays
+## Löschen eines Arrays
 ```bash
 unset aArray
 ```
