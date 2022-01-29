@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Manfred Rosenboom (maroph)">
-        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/bash_assoziative_arrays.html">
+        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/bash_strings.html">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Bash Assoziatives Array - openHPI Linux CLI</title>
+        <title>Bash String - openHPI Linux CLI</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -58,11 +58,11 @@
 </li>
                                     
 <li>
-    <a href="bash_assoziative_arrays.html" class="dropdown-item active">Bash Assoziatives Array</a>
+    <a href="bash_assoziative_arrays.html" class="dropdown-item">Bash Assoziatives Array</a>
 </li>
                                     
 <li>
-    <a href="bash_strings.html" class="dropdown-item">Bash String</a>
+    <a href="bash_strings.html" class="dropdown-item active">Bash String</a>
 </li>
                                 </ul>
                             </li>
@@ -125,17 +125,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="bash_arrays.html" class="nav-link">
+                                <a rel="prev" href="bash_assoziative_arrays.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="bash_strings.html" class="nav-link">
+                                <a rel="next" href="../info/about.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/bash_assoziative_arrays.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/bash_strings.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -155,48 +155,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#bash-assoziative-arrays" class="nav-link">Bash: Assoziative Arrays</a>
+            <li class="nav-item" data-level="1"><a href="#bash-strings" class="nav-link">Bash: Strings</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#anlegen-eines-arrays" class="nav-link">Anlegen eines Arrays</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#keyvalue-paare-zu-einem-array-hinzufugen" class="nav-link">Key/Value Paare zu einem Array hinzufügen</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#zugriff-auf-ein-element-mit-dem-schlussel-key" class="nav-link">Zugriff auf ein Element mit dem Schlüssel (key)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#lange-eines-arrays" class="nav-link">Länge eines Arrays</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#iteration-uber-den-schlussel-key" class="nav-link">Iteration über den Schlüssel (key)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#iteration-uber-den-wert-value" class="nav-link">Iteration über den Wert (value)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#prufen-ob-ein-schlussel-key-im-array-enthalten-ist" class="nav-link">Prüfen, ob ein Schlüssel (key) im Array enthalten ist</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#prufen-ob-ein-schlussel-key-im-array-nicht-enthalten-ist" class="nav-link">Prüfen, ob ein Schlüssel (key) im Array nicht enthalten ist</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#loschen-eines-schlussels-aus-einem-array" class="nav-link">Löschen eines Schlüssels aus einem Array</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#loschen-eines-arrays" class="nav-link">Löschen eines Arrays</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -204,59 +164,11 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="bash-assoziative-arrays">Bash: Assoziative Arrays</h1>
-<h2 id="anlegen-eines-arrays">Anlegen eines Arrays</h2>
-<h3 id="anlegen-eines-leeren-arrays">Anlegen eines leeren Arrays</h3>
-<pre><code class="language-bash">declare -A aArray
-</code></pre>
-<h3 id="anlegen-eines-vorbelegten-arrays">Anlegen eines vorbelegten Arrays</h3>
-<pre><code class="language-bash">declare -A aArrayPre=( [key1]=val1 [key2]=val2 [key3]=val3 )
-</code></pre>
-<h2 id="keyvalue-paare-zu-einem-array-hinzufugen">Key/Value Paare zu einem Array hinzufügen</h2>
-<pre><code class="language-bash">aArray[&quot;key1&quot;]=&quot;value1&quot;
-aArray[&quot;key2&quot;]=&quot;value2&quot;
-</code></pre>
-<h2 id="zugriff-auf-ein-element-mit-dem-schlussel-key">Zugriff auf ein Element mit dem Schlüssel (key)</h2>
-<pre><code class="language-bash">echo &quot;${aArray[&quot;key1&quot;]}&quot;
-echo &quot;${aArray[&quot;key2&quot;]}&quot;
-</code></pre>
-<h2 id="lange-eines-arrays">Länge eines Arrays</h2>
-<pre><code class="language-bash">echo &quot;Länge des Arrays aArray : ${#aArray[@]}&quot;
-</code></pre>
-<h2 id="iteration-uber-den-schlussel-key">Iteration über den Schlüssel (key)</h2>
-<pre><code class="language-bash">for key in &quot;${!aArray[@]}&quot;
-do
-    echo &quot;key : ${key}&quot;
-    echo &quot;key : ${key} , value: ${aArray[${key}]}&quot;
-done
-</code></pre>
-<h2 id="iteration-uber-den-wert-value">Iteration über den Wert (value)</h2>
-<pre><code class="language-bash">for value in &quot;${aArray[@]}&quot;
-do
-    echo &quot;value: ${value}&quot;
-done
-</code></pre>
-<h2 id="prufen-ob-ein-schlussel-key-im-array-enthalten-ist">Prüfen, ob ein Schlüssel (key) im Array enthalten ist</h2>
-<pre><code class="language-bash">if [ ${aArray[key1]+_} ]
-then
-    echo &quot;key1 gefunden&quot;
-fi
-</code></pre>
-<h2 id="prufen-ob-ein-schlussel-key-im-array-nicht-enthalten-ist">Prüfen, ob ein Schlüssel (key) im Array nicht enthalten ist</h2>
-<pre><code class="language-bash">if [ ! ${aArray[keyNONE]+_} ]
-then
-    echo &quot;keyNONE nicht gefunden&quot;
-fi
-</code></pre>
-<h2 id="loschen-eines-schlussels-aus-einem-array">Löschen eines Schlüssels aus einem Array</h2>
-<pre><code class="language-bash">unset aArray[key1]
-</code></pre>
-<h2 id="loschen-eines-arrays">Löschen eines Arrays</h2>
-<pre><code class="language-bash">unset aArray
-</code></pre>
+<h1 id="bash-strings">Bash: Strings</h1>
+<p>TODO</p>
 <hr />
 <p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
-<a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/bash_aArrays.bash">bash_aArrays.bash</a></p></div>
+<a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/bash_strings.bash">bash_strings.bash</a></p></div>
             </div>
         </div>
 

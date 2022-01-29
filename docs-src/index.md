@@ -8,6 +8,6 @@ Diese Site ist meine Begleitseite zu diesem Kurs.
 
 ---
 
-Letze Aktualisierung: <time datetime="2022-01-28T15:58+0100">28-JAN-2022 15:58 CET</time>
+Letze Aktualisierung: <time datetime="2022-01-29T10:34+0100">29-JAN-2022 10:34 CET</time>
 
 [![CC-BY 4.0](./assets/cc-by_88x31.png)](https://creativecommons.org/licenses/by/4.0/)

@@ -22,6 +22,7 @@ declare -A aArray
 echo ""
 #
 echo "Anlegen eines vorbelegten Arrays"
+echo "declare -A aArrayPre=( [key1]=val1 [key2]=val2 [key3]=val3 )"
 declare -A aArrayPre=( [key1]=val1 [key2]=val2 [key3]=val3 )
 echo ""
 #
