@@ -161,6 +161,46 @@
             
             <li class="nav-item" data-level="1"><a href="#bash-strings" class="nav-link">Bash: Strings</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#variable-einen-wert-zuweisen-und-ausgeben" class="nav-link">Variable einen Wert zuweisen und ausgeben</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lange-der-zeichenkette-in-einer-variablen-msg-msg" class="nav-link">Länge der Zeichenkette in einer Variablen: \${#msg}: ${#msg}"</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bilden-eines-teilstrings" class="nav-link">Bilden eines Teilstrings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ausgabe-eines-programms-in-einer-variablen-speichern" class="nav-link">Ausgabe eines Programms in einer Variablen speichern</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ausgabe-eines-programms-in-einer-variablen-speichern_1" class="nav-link">Ausgabe eines Programms in einer Variablen speichern</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#erstes-zeichen-in-einen-grobuchstaben-umwandeln" class="nav-link">Erstes Zeichen in einen Großbuchstaben umwandeln</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#alle-kleinbuchstaben-in-grobuchstaben-umwandeln" class="nav-link">Alle Kleinbuchstaben in Großbuchstaben umwandeln</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#erstes-zeichen-in-einen-kleinbuchstaben-umwandeln" class="nav-link">Erstes Zeichen in einen Kleinbuchstaben umwandeln</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#alle-grobuchstaben-in-kleinbuchstaben-umwandeln" class="nav-link">Alle Großbuchstaben in Kleinbuchstaben umwandeln</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#prufen-ob-eine-variable-eine-positive-zahl-ohne-vorzeichen-enthalt" class="nav-link">Prüfen, ob eine Variable eine positive Zahl ohne Vorzeichen + enthält</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -169,7 +209,59 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="bash-strings">Bash: Strings</h1>
-<p>TODO</p>
+<p>Über Bash Variablen gibt es sehr viel zu sagen. Ich gebe deshalb hier nur einige
+Beispiele an, die ich des öfteren verwende.</p>
+<h2 id="variable-einen-wert-zuweisen-und-ausgeben">Variable einen Wert zuweisen und ausgeben</h2>
+<pre><code class="language-bash">msg=&quot;Hello World!&quot;
+echo &quot;$msg&quot;
+</code></pre>
+<h2 id="lange-der-zeichenkette-in-einer-variablen-msg-msg">Länge der Zeichenkette in einer Variablen: \${#msg}: ${#msg}"</h2>
+<pre><code class="language-bash">echo ${#msg}
+</code></pre>
+<h2 id="bilden-eines-teilstrings">Bilden eines Teilstrings</h2>
+<pre><code class="language-bash">echo &quot;${msg:0:2}&quot;
+</code></pre>
+<p>Es werden die Werte mit dem Index 0-1 ausgegeben.
+Der erste Wert (1) gibt an, ab welchem Index die Ausgabe bebinnt und der zweite
+Wert (2) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll.</p>
+<h2 id="ausgabe-eines-programms-in-einer-variablen-speichern">Ausgabe eines Programms in einer Variablen speichern</h2>
+<pre><code class="language-bash">issue=`cat /etc/issue`
+echo &quot;$issue&quot;
+</code></pre>
+<h2 id="ausgabe-eines-programms-in-einer-variablen-speichern_1">Ausgabe eines Programms in einer Variablen speichern</h2>
+<pre><code class="language-bash">issue=$(cat /etc/issue)
+echo &quot;$issue&quot;
+</code></pre>
+<h2 id="erstes-zeichen-in-einen-grobuchstaben-umwandeln">Erstes Zeichen in einen Großbuchstaben umwandeln</h2>
+<pre><code class="language-bash">echo ${msg^}
+</code></pre>
+<h2 id="alle-kleinbuchstaben-in-grobuchstaben-umwandeln">Alle Kleinbuchstaben in Großbuchstaben umwandeln</h2>
+<pre><code class="language-bash">echo ${msg^^}
+</code></pre>
+<h3 id="alternative-methode-alle-kleinbuchstaben-in-grobuchstaben-umwandeln">Alternative Methode: Alle Kleinbuchstaben in Großbuchstaben umwandeln</h3>
+<pre><code class="language-bash">echo $uuid | tr '[:lower:]' '[:upper:]'
+</code></pre>
+<h2 id="erstes-zeichen-in-einen-kleinbuchstaben-umwandeln">Erstes Zeichen in einen Kleinbuchstaben umwandeln</h2>
+<pre><code class="language-bash">echo ${msg,}
+</code></pre>
+<h2 id="alle-grobuchstaben-in-kleinbuchstaben-umwandeln">Alle Großbuchstaben in Kleinbuchstaben umwandeln</h2>
+<pre><code class="language-bash">echo ${msg,,}
+</code></pre>
+<h3 id="alternative-methode-alle-grobuchstaben-in-kleinbuchstaben-umwandeln">Alternative Methode: Alle Großbuchstaben in Kleinbuchstaben umwandeln</h3>
+<pre><code class="language-bash">echo $msg | tr '[:upper:]' '[:lower:]'
+</code></pre>
+<h2 id="prufen-ob-eine-variable-eine-positive-zahl-ohne-vorzeichen-enthalt">Prüfen, ob eine Variable eine positive Zahl ohne Vorzeichen + enthält</h2>
+<pre><code class="language-bash">declare -a inp=(a -1 0 +1 1)
+for n in ${inp[@]}
+do
+    if ! [[ &quot;$n&quot; =~ ^[1-9][0-9]*$ ]]
+    then
+        echo &quot;$n - keine positive Zahl Zahl ohne Vorzeichen +&quot;
+    else
+        echo &quot;$n - positive Zahl Zahl ohne Vorzeichen +&quot;
+    fi
+done
+</code></pre>
 <hr />
 <p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
 <a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/bash_variables.bash">bash_variables.bash</a></p></div>

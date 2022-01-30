@@ -16,6 +16,7 @@ echo ""
 #
 ###############################################################################
 #
+echo "Variable einen Wert zuweisen und ausgeben"
 echo "msg=\"Hello World!\""
 echo "echo \"$msg\""
 echo "---"
@@ -30,9 +31,29 @@ echo ""
 #
 ###############################################################################
 #
+echo "Bilden eines Teilstrings"
+echo "0: ab diesem Index, 2: alle Elemente vor dieser Position"
 echo "echo \"\${msg:0:2}\""
 echo "---"
 echo "${msg:0:2}"
+echo ""
+#
+###############################################################################
+#
+echo "Ausgabe eines Programms in einer Variablen speichern"
+echo "issue=\`cat /etc/issue\`"
+echo "echo "\$issue""
+echo "---"
+issue=`cat /etc/issue`
+echo "$issue"
+echo ""
+#
+echo "Ausgabe eines Programms in einer Variablen speichern"
+echo "issue=\$(cat /etc/issue)"
+echo "echo "\$issue""
+echo "---"
+issue=$(cat /etc/issue)
+echo "$issue"
 echo ""
 #
 ###############################################################################
@@ -42,16 +63,30 @@ echo "---"
 msg="hello world!"
 echo ""
 #
-# first char to upper
+echo "Erstes Zeichen in einen Großbuchstaben umwandeln"
 echo "echo \${msg^}"
 echo "---"
 echo ${msg^}
 echo ""
 #
-#  all chars to upper
+echo "Alle Kleinbuchstaben in Großbuchstaben umwandeln"
 echo "echo \${msg^^}"
 echo "---"
 echo ${msg^^}
+echo ""
+#
+echo "#UUID: https://en.wikipedia.org/wiki/Universally_unique_identifier"
+echo "uuid=\$(cat /proc/sys/kernel/random/uuid)"
+echo "---"
+uuid=$(cat /proc/sys/kernel/random/uuid)
+echo "\$uuid     : $uuid"
+echo "\${uuid^^} : ${uuid^^}"
+echo ""
+#
+echo "Alternative Methode: Alle Kleinbuchstaben in Großbuchstaben umwandeln"
+echo "echo \$uuid | tr '[:lower:]' '[:upper:]'"
+echo "---"
+echo $uuid | tr '[:lower:]' '[:upper:]'
 echo ""
 #
 ###############################################################################
@@ -61,40 +96,47 @@ msg="Hello World!"
 echo "---"
 echo ""
 #
-# first char to lower
+echo "Erstes Zeichen in einen Kleinbuchstaben umwandeln"
 echo "echo \${msg,}"
 echo "---"
 echo ${msg,}
 echo ""
 #
-#  all chars to lower
+echo "Alle Großbuchstaben in Kleinbuchstaben umwandeln"
 echo "echo \${msg,,}"
 echo "---"
 echo ${msg,,}
 echo ""
 #
+echo "Alternative Methode: Alle Großbuchstaben in Kleinbuchstaben umwandeln"
+echo "echo \$msg | tr '[:upper:]' '[:lower:]'"
+echo "---"
+echo $msg | tr '[:upper:]' '[:lower:]'
+echo ""
+#
 ###############################################################################
 #
-echo "declare -a inp=(a -1 0 1)"
+echo "Prüfen, ob eine Variable eine positive Zahl ohne Vorzeichen + enthält"
+echo "declare -a inp=(a -1 0 +1 1)"
 echo "for n in \${inp[@]}"
 echo "do"
 echo "    if ! [[ "\$n" =~ ^[1-9][0-9]*$ ]]"
 echo "    then"
-echo "        echo \"$n - keine positive Zahl\""
+echo "        echo \"$n - keine positive Zahl ohne Vorzeichen +\""
 echo "    else"
-echo "        echo \"$n - positive Zahl\""
+echo "        echo \"$n - positive Zahl ohne Vorzeichen +\""
 echo "    fi"
 echo "done"
 echo "---"
 #
-declare -a inp=(a -1 0 1)
+declare -a inp=(a -1 0 +1 1)
 for n in ${inp[@]}
 do
     if ! [[ "$n" =~ ^[1-9][0-9]*$ ]]
     then
-        echo "$n - keine positive Zahl"
+        echo "$n - keine positive Zahl Zahl ohne Vorzeichen +"
     else
-        echo "$n - positive Zahl"
+        echo "$n - positive Zahl Zahl ohne Vorzeichen +"
     fi
 done
 echo ""
