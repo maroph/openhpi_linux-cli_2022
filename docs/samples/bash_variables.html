@@ -177,11 +177,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#lange-der-zeichenkette-in-einer-variablen-msg-msg" class="nav-link">Länge der Zeichenkette in einer Variablen: \${#msg}: ${#msg}"</a>
+            <li class="nav-item" data-level="2"><a href="#lange-der-zeichenkette-in-einer-variablen-msg" class="nav-link">Länge der Zeichenkette in einer Variablen: ${#msg}</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#bilden-eines-teilstrings" class="nav-link">Bilden eines Teilstrings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ist-teilstring-in-einem-string-enthalten" class="nav-link">Ist Teilstring in einem String enthalten</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -227,7 +231,7 @@ Beispiele an, die ich des öfteren verwende.</p>
 <pre><code class="language-bash">msg=&quot;Hello World!&quot;
 echo &quot;$msg&quot;
 </code></pre>
-<h2 id="lange-der-zeichenkette-in-einer-variablen-msg-msg">Länge der Zeichenkette in einer Variablen: \${#msg}: ${#msg}"</h2>
+<h2 id="lange-der-zeichenkette-in-einer-variablen-msg">Länge der Zeichenkette in einer Variablen: ${#msg}</h2>
 <pre><code class="language-bash">echo ${#msg}
 </code></pre>
 <h2 id="bilden-eines-teilstrings">Bilden eines Teilstrings</h2>
@@ -236,6 +240,19 @@ echo &quot;$msg&quot;
 <p>Es werden die Werte mit dem Index 0-1 ausgegeben.
 Der erste Wert (1) gibt an, ab welchem Index die Ausgabe bebinnt und der zweite
 Wert (2) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll.</p>
+<h2 id="ist-teilstring-in-einem-string-enthalten">Ist Teilstring in einem String enthalten</h2>
+<pre><code class="language-bash">string='A long string'
+if [[ $string == *&quot;A long&quot;* ]]
+then
+    echo &quot;'A long' is part of the string&quot;
+fi
+</code></pre>
+<pre><code class="language-bash">string='A long string'
+if [[ $string != *&quot;A short&quot;* ]]
+then
+    echo &quot;'A short' is not part of the string&quot;
+fi
+</code></pre>
 <h2 id="ausgabe-eines-programms-in-einer-variablen-speichern">Ausgabe eines Programms in einer Variablen speichern</h2>
 <pre><code class="language-bash">issue=`cat /etc/issue`
 echo &quot;$issue&quot;

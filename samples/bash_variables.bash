@@ -40,6 +40,60 @@ echo ""
 #
 ###############################################################################
 #
+echo "Ist Teilstring in einem String enthalten"
+echo "string='A long string'"
+echo "if [[ \$string == *\"A long\"* ]]"
+echo "then"
+echo "    echo \"'A long' is part of the string\""
+echo "fi"
+echo "---"
+#
+string='A long string'
+if [[ $string == *"A long"* ]]
+then
+    echo "'A long' is part of the string"
+fi
+echo ""
+echo "string='A long string'"
+echo "if [[ \$string != *\"A short\"* ]]"
+echo "then"
+echo "    echo \"'A short' is not part of the string\""
+echo "fi"
+echo "---"
+#
+string='A long string'
+if [[ $string != *"A short"* ]]
+then
+    echo "'A short' is not part of the string"
+fi
+echo ""
+#
+###############################################################################
+#
+echo "Ausgabe eines Programms in einer Variablen speichern"
+echo "issue=\`cat /etc/issue\`"
+echo "echo "\$issue""
+echo "---"
+issue=`cat /etc/issue`
+echo "$issue"
+echo ""
+#
+echo "Ausgabe eines Programms in einer Variablen speichern"
+echo "issue=\$(cat /etc/issue)"
+echo "echo "\$issue""
+echo "---"
+issue=$(cat /etc/issue)
+echo "$issue"
+echo ""
+#
+###############################################################################
+#
+echo "msg=\"hello world!\""
+echo "---"
+msg="hello world!"
+#
+###############################################################################
+#
 echo "Ausgabe eines Programms in einer Variablen speichern"
 echo "issue=\`cat /etc/issue\`"
 echo "echo "\$issue""

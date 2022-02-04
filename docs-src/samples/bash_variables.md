@@ -8,7 +8,7 @@ msg="Hello World!"
 echo "$msg"
 ```
 
-## Länge der Zeichenkette in einer Variablen: \${#msg}: ${#msg}"
+## Länge der Zeichenkette in einer Variablen: ${#msg}
 ```bash
 echo ${#msg}
 ```
@@ -21,6 +21,23 @@ echo "${msg:0:2}"
 Es werden die Werte mit dem Index 0-1 ausgegeben.
 Der erste Wert (1) gibt an, ab welchem Index die Ausgabe bebinnt und der zweite
 Wert (2) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll.
+
+## Ist Teilstring in einem String enthalten
+```bash
+string='A long string'
+if [[ $string == *"A long"* ]]
+then
+    echo "'A long' is part of the string"
+fi
+```
+
+```bash
+string='A long string'
+if [[ $string != *"A short"* ]]
+then
+    echo "'A short' is not part of the string"
+fi
+```
 
 ## Ausgabe eines Programms in einer Variablen speichern
 ```bash
