@@ -1,5 +1,10 @@
 # Quellenreferenz
-Diese Site wurde mit [MkDocs](https://www.mkdocs.org/) erstellt.
+Diese Site wurde mit [MkDocs](https://www.mkdocs.org/) erstellt. Zusätzlich habe ich
+das Theme 
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+und das Plugin
+[mkdocs-git-revision-date-plugin](https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin/)
+verwendet.
 
 Das von mir verwendete [Linux Logo](../assets/24944955000_7b48df73ba_small.jpg)
 ist einer verkleinerte Version der Datei

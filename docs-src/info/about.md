@@ -1,28 +1,21 @@
 # Über diese Site
 Der gesamte Inhalt dieser Site (HTML und Skripte) ist abgelegt in meinem
-GitHub Repository
-[openhpi_linux-cli_2022](https://github.com/maroph/openhpi_linux-cli_2022/).
+[GitHub Repository](https://github.com/maroph/openhpi_linux-cli_2022/).
 
 ## Benutzte Linux Versionen
 Für meine Beispiele habe ich die folgenden Linux Versionen benutzt:
 
-**Debian 10.13 (Raspberry Pi OS)**
-```bash
-echo $BASH_VERSION
-5.0.3(1)-release
-```
-
-**Debian 11.2**
+**Debian 11.2 on WSL (Windows Subsystem for Linux)**
 ```bash
 echo $BASH_VERSION
 5.1.4(1)-release
 ```
 
-### Testumgebungen
-
-- Debian 11 Virtual Machine (Virtualbox)
-- Raspberry Pi OS
-- WSL (Windows Subsystem for Linux)
+**Raspberry Pi OS 10.11**
+```bash
+echo $BASH_VERSION
+5.0.3(1)-release
+```
 
 ## Struktur der Site
 Die Daten auf dieser Site sind folgendermaßen strukturiert:
@@ -48,6 +41,8 @@ python -m pip install --upgrade pip
 python -m pip install --upgrade setuptools
 python -m pip install --upgrade wheel
 python -m pip install --upgrade mkdocs
+python -m pip install --upgrade mkdocs-material
+python -m pip install --upgrade mkdocs-git-revision-date-plugin
 ```
 
 Sollte das Modul venv nicht installiert sein, muss man das Package python3-venv
@@ -55,16 +50,18 @@ installieren.
 
 Auf Debian/Ubuntu/Raspbian geht das mit dem folgenden Kommando
 
-    sudo apt install python3-venv
+```bash
+sudo apt install python3-venv
+```
 
 ## Lokale Erzeugung der Site
 
-    ./build
+```bash
+./build
+```
 
 ## Veröffentlichung der Site
-Für mein GitHub Repository 
-[openhpi_linux-cli_2022](https://github.com/maroph/openhpi_linux-cli_2022/)
-habe ich die GitHub Page 
+Für mein GitHub Repository habe ich die GitHub Page 
 
 <https://maroph.github.io/openhpi_linux-cli_2022/>
 
@@ -74,8 +71,10 @@ im Branch main verwendet.
 Um diese Page zu aktualisieren, muss man die Änderungen im lokalen Git Repository
 committen und in das GitHub Repository pushen:
 
-    git commit -m "my commit message"
-    git push
+```bash
+git commit -m "my commit message"
+git push
+```
 
 Nach einer relativ kurzen Zeit sind die Änderungen auf der GitHub Page zu sehen.
 

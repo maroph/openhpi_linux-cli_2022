@@ -11,7 +11,7 @@
 #
 SCRIPT_NAME=`basename $0`
 SCRIPT_DIR=`dirname $0`
-VERSION="${SCRIPT_NAME}  1  (23-JAN-2022)"
+VERSION="${SCRIPT_NAME}  1  (04-FEB-2022)"
 #
 ###############################################################################
 #
@@ -149,6 +149,10 @@ then
     python -m pip install --upgrade wheel || exit 1
     echo "python -m pip install --upgrade mkdocs"
     python -m pip install --upgrade mkdocs || exit 1
+    echo "${SCRIPT_NAME}: python -m pip install --upgrade mkdocs-material"
+    python -m pip install --upgrade mkdocs-material || exit 1
+    echo "${SCRIPT_NAME}: python -m pip install --upgrade mkdocs-git-revision-date-plugin"
+    python -m pip install --upgrade mkdocs-git-revision-date-plugin || exit 1
 #
     echo "python -m pip freeze >requirements.txt"
     python -m pip freeze >${SCRIPT_DIR}/venv/requirements.txt || exit 1
@@ -197,6 +201,30 @@ fi
 echo "${SCRIPT_NAME}: Python module mkdocs available"
 echo ""
 python -m pip show mkdocs 2>/dev/null | head -2
+echo ""
+#
+python -m pip show mkdocs-material >/dev/null 2>/dev/null
+if [ $? -ne 0 ]
+then
+    echo "${SCRIPT_NAME}: Python module mkdocs-material not available"
+    exit 1
+fi
+#
+echo "${SCRIPT_NAME}: Python module mkdocs-material available"
+echo ""
+python -m pip show mkdocs-material 2>/dev/null | head -2
+echo ""
+#
+python -m pip show mkdocs-git-revision-date-plugin >/dev/null 2>/dev/null
+if [ $? -ne 0 ]
+then
+    echo "${SCRIPT_NAME}: Python module mkdocs-git-revision-date-plugin not available"
+    exit 1
+fi
+#
+echo "${SCRIPT_NAME}: Python module mkdocs-git-revision-date-plugin available"
+echo ""
+python -m pip show mkdocs-git-revision-date-plugin 2>/dev/null | head -2
 echo ""
 #
 ###############################################################################
