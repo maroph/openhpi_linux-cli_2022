@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://maroph.github.io/openhpi_linux-cli_2022/samples/date_samples.html</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://maroph.github.io/openhpi_linux-cli_2022/woche1/index.html</loc>
          <lastmod>2022-02-05</lastmod>
          <changefreq>daily</changefreq>

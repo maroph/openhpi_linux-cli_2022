@@ -12,14 +12,14 @@
         <meta name="author" content="Manfred Rosenboom (maroph)">
       
       
-        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/woche1/index.html">
+        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/date_samples.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
-        <title>Woche1 - openHPI Linux CLI</title>
+        <title>date Kommando - openHPI Linux CLI</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#woche-1" class="md-skip">
+        <a href="#beispiele-fur-das-kommando-date" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Woche1
+              date Kommando
             
           </span>
         </div>
@@ -172,15 +172,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../woche1/index.html" class="md-tabs__link">
         Woche
       </a>
     </li>
@@ -190,13 +188,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../samples/bash_arrays.html" class="md-tabs__link">
+      <a href="bash_arrays.html" class="md-tabs__link md-tabs__link--active">
         Beispiele
       </a>
     </li>
@@ -313,14 +313,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -341,21 +339,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../woche1/index.html" class="md-nav__link">
         Woche1
       </a>
-      
     </li>
   
 
@@ -387,12 +375,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -415,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/bash_arrays.html" class="md-nav__link">
+      <a href="bash_arrays.html" class="md-nav__link">
         Bash Arrays
       </a>
     </li>
@@ -429,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/bash_assoziative_arrays.html" class="md-nav__link">
+      <a href="bash_assoziative_arrays.html" class="md-nav__link">
         Bash Assoziative Arrays
       </a>
     </li>
@@ -443,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/bash_variables.html" class="md-nav__link">
+      <a href="bash_variables.html" class="md-nav__link">
         Bash Variablen
       </a>
     </li>
@@ -455,11 +445,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../samples/date_samples.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          date Kommando
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="date_samples.html" class="md-nav__link md-nav__link--active">
         date Kommando
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfacher-zeitstempel-fur-logdateien-und-temporare-dateien" class="md-nav__link">
+    Einfacher Zeitstempel für Logdateien und temporäre Dateien
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rfc3339-zeitstempelformat-erzeugen" class="md-nav__link">
+    RFC3339 Zeitstempelformat erzeugen
+  </a>
+  
+    <nav class="md-nav" aria-label="RFC3339 Zeitstempelformat erzeugen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ausgabe-in-utc-zeit" class="md-nav__link">
+    Ausgabe in UTC Zeit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sekunden-seit-dem-01011970-000000-uhr-utc-zeit" class="md-nav__link">
+    Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -779,6 +837,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfacher-zeitstempel-fur-logdateien-und-temporare-dateien" class="md-nav__link">
+    Einfacher Zeitstempel für Logdateien und temporäre Dateien
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rfc3339-zeitstempelformat-erzeugen" class="md-nav__link">
+    RFC3339 Zeitstempelformat erzeugen
+  </a>
+  
+    <nav class="md-nav" aria-label="RFC3339 Zeitstempelformat erzeugen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ausgabe-in-utc-zeit" class="md-nav__link">
+    Ausgabe in UTC Zeit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sekunden-seit-dem-01011970-000000-uhr-utc-zeit" class="md-nav__link">
+    Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -789,20 +889,65 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/woche1/index.md" title="Seite editieren" class="md-content__button md-icon">
+<a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/date_samples.md" title="Seite editieren" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="woche-1">Woche 1</h1>
-<p>TODO</p>
+<h1 id="beispiele-fur-das-kommando-date">Beispiele für das Kommando date</h1>
+<h2 id="einfacher-zeitstempel-fur-logdateien-und-temporare-dateien">Einfacher Zeitstempel für Logdateien und temporäre Dateien</h2>
+<p>Ausgabeformat: YYYYMMDDhhmmss
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>date +<span class="s2">&quot;%Y%m%d%H%M%S&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="m">20220205171709</span>
+</code></pre></div></p>
+<h2 id="rfc3339-zeitstempelformat-erzeugen">RFC3339 Zeitstempelformat erzeugen</h2>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc3339">RFC3339: Date and Time on the Internet: Timestamps</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>date +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="m">2022</span>-02-05T17:17:09+01:00
+</code></pre></div>
+<h3 id="ausgabe-in-utc-zeit">Ausgabe in UTC Zeit</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>date --utc +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="m">2022</span>-02-05T16:17:09+00:00
+</code></pre></div>
+<h2 id="sekunden-seit-dem-01011970-000000-uhr-utc-zeit">Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit</h2>
+<p>In Linux wird die Zeit intern in Sekunden (oder auch Milli- bzw. Nanosekunden) seit
+dem 01.01.1970 um 00:00:00 Uhr UTC Zeit berechnet. In vielen Logdateien wird dieser
+Wert als Zeitstempel benutzt. Mit dme date Kommando kann man sich diesen Wert 
+ausgeben lassen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>date +%s
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">1644077829</span>
+</code></pre></div>
+<h1 id="_1"></h1>
+<h3 id="sekunden-seit-dem-01011970-000000-uhr-utc-zeit-in-datum-umwandeln">Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit in Datum umwandeln</h3>
+<p>Findet man in einer Logdatei so einen Zeitstempel, kann man ihn mit dem date
+Kommando einfach in ein Datum samt Uhrzeit.</p>
+<p>Zuerst holen wir uns einen Zeitstempel (um Beispiel die aktuelle Zeit)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">now</span><span class="o">=</span><span class="k">$(</span>date +%s<span class="k">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">now</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="m">1644077829</span>
+</code></pre></div>
+<p>Diesen Zeitstempel kann man folgendermaßen im date Kommando nutzen</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>date --date<span class="o">=</span>@<span class="si">${</span><span class="nv">now</span><span class="si">}</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Sat <span class="m">05</span> Feb <span class="m">2022</span> <span class="m">05</span>:17:09 PM CET
+</code></pre></div>
+<p>Zusätzlich kann man auf ein Ausgabeformat angeben (hier das RFC3339 Format)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>date --date<span class="o">=</span>@<span class="si">${</span><span class="nv">now</span><span class="si">}</span> +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="m">2022</span>-02-05T17:17:09+01:00
+</code></pre></div>
+<p>Alternativ kann man auch eine Ausgabe in der UTC Zeit erhalten</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>date --utc --date<span class="o">=</span>@<span class="si">${</span><span class="nv">now</span><span class="si">}</span> +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="m">2022</span>-02-05T16:17:09+00:00
+</code></pre></div>
+<hr />
+<p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
+<a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/date_samples.bash">date_samples.bash</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Letztes Update:
-      2022-01-28
+      2022-02-05
     
   </small>
 </div>
@@ -819,7 +964,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Home" rel="prev">
+        <a href="bash_variables.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Bash Variablen" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -828,20 +973,20 @@
               <span class="md-footer__direction">
                 Zurück
               </span>
-              Home
+              Bash Variablen
             </div>
           </div>
         </a>
       
       
         
-        <a href="../woche2/index.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Woche2" rel="next">
+        <a href="../info/about.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Über" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Weiter
               </span>
-              Woche2
+              Über
             </div>
           </div>
           <div class="md-footer__button md-icon">

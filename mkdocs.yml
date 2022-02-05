@@ -30,6 +30,7 @@ nav:
         - Bash Arrays: samples/bash_arrays.md
         - Bash Assoziative Arrays: samples/bash_assoziative_arrays.md
         - Bash Variablen: samples/bash_variables.md
+        - date Kommando: samples/date_samples.md
     - Links:
         - Bash:
             - Bash Reference Manual: https://www.gnu.org/software/bash/manual/html_node/index.html
