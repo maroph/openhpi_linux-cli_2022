@@ -11,6 +11,9 @@
 echo "Beispiele: Bash Arrays"
 echo ""
 echo "Bash Version : ${BASH_VERSION}"
+echo "LANG         : ${LANG}"
+echo -n "Kernel       : "
+uname -s -r -m
 echo ""
 echo ""
 #

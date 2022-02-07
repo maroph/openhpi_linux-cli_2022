@@ -21,6 +21,18 @@ date --utc +"%Y-%m-%dT%H:%M:%S%:z"
 2022-02-05T16:17:09+00:00
 ```
 
+## ISO 8601 Zeitstempelformat erzeugen
+
+```bash
+date +"%Y-%m-%dT%H:%M:%S%z"
+2022-02-05T17:17:09+0100
+```
+
+D.h: der einzige Unterschied ist der Doppelpunkt (:) in der Zeitzonenangabe. Das 
+RFC3339 Format ist aber auch ein gültiges ISO 8601 Format.
+
+Weitere Details findet man hier: [RFC 3339 vs ISO 8601](https://ijmacd.github.io/rfc3339-iso8601/).
+
 ## Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit
 In Linux wird die Zeit intern in Sekunden (oder auch Milli- bzw. Nanosekunden) seit
 dem 01.01.1970 um 00:00:00 Uhr UTC Zeit berechnet. In vielen Logdateien wird dieser

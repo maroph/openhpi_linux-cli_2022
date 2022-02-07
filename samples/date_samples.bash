@@ -10,11 +10,23 @@
 #
 echo "Beispiele für das Kommando date"
 echo ""
+echo "Bash Version : ${BASH_VERSION}"
+echo "LANG         : ${LANG}"
+echo -n "Kernel       : "
+uname -s -r -m
+echo ""
+echo ""
 #
 ###############################################################################
 #
 echo "Einfacher Zeitstempel für Logdateien und temporäre Dateien"
 echo "date +\"%Y%m%d%H%M%S\""
+echo "    %Y : Jahr vierstellig"
+echo "    %m : Monat (01, 02, ..., 12)"
+echo "    %d : Tag im Monat (01, ..., 31)"
+echo "    %H : Stunde (00, 01, ..., 23)"
+echo "    %M : Minute (00, 01, ..., 60)"
+echo "    %S : Sekunde (00, 01, ..., 60)"
 echo "---"
 date +"%Y%m%d%H%M%S"
 echo ""
@@ -33,6 +45,17 @@ echo "Ausgabe in UTC Zeit"
 echo "date --utc +\"%Y-%m-%dT%H:%M:%S%:z\""
 echo "---"
 date --utc +"%Y-%m-%dT%H:%M:%S%:z"
+echo ""
+#
+###############################################################################
+#
+echo "ISO 8601 Zeitstempelformat erzeugen"
+echo "Weitere Details: RFC 3339 vs ISO 8601"
+echo "https://ijmacd.github.io/rfc3339-iso8601/"
+echo ""
+echo "date +\"%Y-%m-%dT%H:%M:%S%z\""
+echo "---"
+date +"%Y-%m-%dT%H:%M:%S%z"
 echo ""
 #
 ###############################################################################
