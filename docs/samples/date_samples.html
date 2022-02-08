@@ -738,6 +738,20 @@ Kommando einfach in ein Datum samt Uhrzeit.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>date --utc --date<span class="o">=</span>@<span class="si">${</span><span class="nv">now</span><span class="si">}</span> +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="m">2022</span>-02-05T16:17:09+00:00
 </code></pre></div>
+<h2 id="git-letzten-commit-zeitstempel-fur-eine-datei-ausgeben">Git: Letzten commit Zeitstempel für eine Datei ausgeben</h2>
+<p>Den Zeitstempel, in Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit, erhält
+man folgendermaßen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git log -1 --format<span class="o">=</span>%ct docs-src/samples/date_samples.md
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="m">1644230639</span>
+</code></pre></div>
+<p>Das zugehörige Datum kann man dann so ausgeben:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>date --date<span class="o">=</span>@1644230639
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Mon <span class="m">07</span> Feb <span class="m">2022</span> <span class="m">11</span>:43:59 AM CET
+</code></pre></div>
+<p>Hier noch der Zeitstempel im RFC3339 Format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>date --date<span class="o">=</span>@1644230639 +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="m">2022</span>-02-07T11:43:59+01:00
+</code></pre></div>
 <hr />
 <p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
 <a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/date_samples.bash">date_samples.bash</a></p>
@@ -747,7 +761,7 @@ Kommando einfach in ein Datum samt Uhrzeit.</p>
   <small>
     
       Letztes Update:
-      2022-02-07
+      2022-02-08
     
   </small>
 </div>
