@@ -13,6 +13,24 @@ echo "$msg"
 echo ${#msg}
 ```
 
+## Variable schreibschützen (readonly)
+```bash
+msgr="Hello World! #1"
+echo "$msgr"
+Hello World! #1
+```
+
+```bash
+declare -r msgr
+msgr="Hello World! #2"
+samples/bash_variables.bash: line 49: msgr: readonly variable
+```
+
+```bash
+echo "$msgr"
+Hello World! #1
+```
+
 ## Bilden eines Teilstrings
 ```bash
 echo "${msg:0:2}"

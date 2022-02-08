@@ -1,9 +1,8 @@
-.* export-ignore
+.git* export-ignore
 #
 * text=auto
 #
 build text eol=lf
-LICENSE text
 #
 *.bash text eol=lf
 *.md text

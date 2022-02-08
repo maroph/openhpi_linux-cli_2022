@@ -9,9 +9,10 @@
 
 ## Linux:
 
-- [JSLinux (Linux im Browser)](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
+- [JSLinux](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
+  Linux im Browser (Chrome, Edge, Firefox, ...)  
   Alpine Linux 3.12 mit einem Kernel 4.12
-- [Linux Manpages (die.net)](https://linux.die.net/man/)
-- [Linux Manpages (man.cx)](https://man.cx/)
-- [Rheinwerk Linux](https://openbook.rheinwerk-verlag.de/linux/index.html)
+- [Linux Manpages: die.net](https://linux.die.net/man/)
+- [Linux Manpages:man.cx](https://man.cx/)
+- [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
 

@@ -34,6 +34,25 @@ echo ""
 #
 ###############################################################################
 #
+echo "Variable schreibschützen (readonly)"
+echo ""
+echo "msgr=\"Hello World! #1\""
+echo "echo \"\$msgr\""
+echo "declare -r msgr"
+echo "msgr=\"Hello World! #2\""
+echo "echo \"\$msgr\""
+echo "---"
+#
+msgr="Hello World! #1"
+echo "$msgr"
+declare -r msgr
+msgr="Hello World! #2"
+echo "$msgr"
+echo "---"
+echo ""
+#
+###############################################################################
+#
 echo "Bilden eines Teilstrings"
 echo "0: ab diesem Index, 2: alle Elemente vor dieser Position"
 echo "echo \"\${msg:0:2}\""

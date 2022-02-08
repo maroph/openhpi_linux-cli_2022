@@ -77,6 +77,29 @@ date --utc --date=@${now} +"%Y-%m-%dT%H:%M:%S%:z"
 2022-02-05T16:17:09+00:00
 ```
 
+## Git: Letzten commit Zeitstempel für eine Datei ausgeben
+Den Zeitstempel, in Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit, erhält
+man folgendermaßen:
+
+```bash
+git log -1 --format=%ct docs-src/samples/date_samples.md
+1644230639
+```
+
+Das zugehörige Datum kann man dann so ausgeben:
+
+```bash
+date --date=@1644230639
+Mon 07 Feb 2022 11:43:59 AM CET
+```
+
+Hier noch der Zeitstempel im RFC3339 Format:
+
+```bash
+date --date=@1644230639 +"%Y-%m-%dT%H:%M:%S%:z"
+2022-02-07T11:43:59+01:00
+```
+
 ---
 
 Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
