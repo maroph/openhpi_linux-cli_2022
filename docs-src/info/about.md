@@ -5,7 +5,7 @@ Der gesamte Inhalt dieser Site (HTML und Skripte) ist abgelegt in meinem
 ## Benutzte Linux Versionen
 Für meine Beispiele habe ich die folgenden Linux Versionen benutzt:
 
-**Debian 11.2 on WSL (Windows Subsystem for Linux)**
+**Debian 11.2 on WSL2 (Windows Subsystem for Linux)**
 ```bash
 echo $BASH_VERSION
 5.1.4(1)-release

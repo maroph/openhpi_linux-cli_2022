@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/date_samples.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2b4465f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.d6be258b.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -496,6 +496,26 @@
     Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit
   </a>
   
+    <nav class="md-nav" aria-label="Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sekunden-seit-dem-01011970-000000-uhr-utc-zeit-in-datum-umwandeln" class="md-nav__link">
+    Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit in Datum umwandeln
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-letzten-commit-zeitstempel-fur-eine-datei-ausgeben" class="md-nav__link">
+    Git: Letzten commit Zeitstempel für eine Datei ausgeben
+  </a>
+  
 </li>
       
     </ul>
@@ -668,6 +688,26 @@
     Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit
   </a>
   
+    <nav class="md-nav" aria-label="Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sekunden-seit-dem-01011970-000000-uhr-utc-zeit-in-datum-umwandeln" class="md-nav__link">
+    Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit in Datum umwandeln
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-letzten-commit-zeitstempel-fur-eine-datei-ausgeben" class="md-nav__link">
+    Git: Letzten commit Zeitstempel für eine Datei ausgeben
+  </a>
+  
 </li>
       
     </ul>
@@ -717,7 +757,6 @@ ausgeben lassen:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>date +%s
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="m">1644077829</span>
 </code></pre></div>
-<h1 id="_1"></h1>
 <h3 id="sekunden-seit-dem-01011970-000000-uhr-utc-zeit-in-datum-umwandeln">Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit in Datum umwandeln</h3>
 <p>Findet man in einer Logdatei so einen Zeitstempel, kann man ihn mit dem date
 Kommando einfach in ein Datum samt Uhrzeit.</p>
@@ -730,7 +769,7 @@ Kommando einfach in ein Datum samt Uhrzeit.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>date --date<span class="o">=</span>@<span class="si">${</span><span class="nv">now</span><span class="si">}</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Sat <span class="m">05</span> Feb <span class="m">2022</span> <span class="m">05</span>:17:09 PM CET
 </code></pre></div>
-<p>Zusätzlich kann man auf ein Ausgabeformat angeben (hier das RFC3339 Format)</p>
+<p>Zusätzlich kann man auch ein Ausgabeformat angeben (hier das RFC3339 Format)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>date --date<span class="o">=</span>@<span class="si">${</span><span class="nv">now</span><span class="si">}</span> +<span class="s2">&quot;%Y-%m-%dT%H:%M:%S%:z&quot;</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="m">2022</span>-02-05T17:17:09+01:00
 </code></pre></div>
@@ -834,10 +873,10 @@ man folgendermaßen:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "In Zwischenablage kopieren", "clipboard.copied": "In Zwischenablage kopiert", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.placeholder": "Suchbegriff eingeben", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.960e086b.min.js"></script>
+      <script src="../assets/javascripts/bundle.e3b2bf44.min.js"></script>
       
     
   </body>

@@ -34,6 +34,7 @@ RFC3339 Format ist aber auch ein gültiges ISO 8601 Format.
 Weitere Details findet man hier: [RFC 3339 vs ISO 8601](https://ijmacd.github.io/rfc3339-iso8601/).
 
 ## Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit
+
 In Linux wird die Zeit intern in Sekunden (oder auch Milli- bzw. Nanosekunden) seit
 dem 01.01.1970 um 00:00:00 Uhr UTC Zeit berechnet. In vielen Logdateien wird dieser
 Wert als Zeitstempel benutzt. Mit dme date Kommando kann man sich diesen Wert 
@@ -43,8 +44,9 @@ ausgeben lassen:
 date +%s
 1644077829
 ```
-#
+
 ### Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit in Datum umwandeln
+
 Findet man in einer Logdatei so einen Zeitstempel, kann man ihn mit dem date
 Kommando einfach in ein Datum samt Uhrzeit.
 
@@ -63,7 +65,7 @@ date --date=@${now}
 Sat 05 Feb 2022 05:17:09 PM CET
 ```
 
-Zusätzlich kann man auf ein Ausgabeformat angeben (hier das RFC3339 Format)
+Zusätzlich kann man auch ein Ausgabeformat angeben (hier das RFC3339 Format)
 
 ```bash
 date --date=@${now} +"%Y-%m-%dT%H:%M:%S%:z"
@@ -78,6 +80,7 @@ date --utc --date=@${now} +"%Y-%m-%dT%H:%M:%S%:z"
 ```
 
 ## Git: Letzten commit Zeitstempel für eine Datei ausgeben
+
 Den Zeitstempel, in Sekunden seit dem 01.01.1970, 00:00:00 Uhr UTC-Zeit, erhält
 man folgendermaßen:
 
