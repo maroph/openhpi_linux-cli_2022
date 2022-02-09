@@ -4,6 +4,7 @@
 
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 - [Bash FAQ](https://mywiki.wooledge.org/BashFAQ/)
+- [Bash scripting cheatsheet](https://devhints.io/bash)
 - [Rheinwerk Linux](https://openbook.rheinwerk-verlag.de/linux/linux_kap11_001.html)
 - [SelfLinux](https://www.selflinux.org/selflinux/html/shellprogrammierung.html)
 
