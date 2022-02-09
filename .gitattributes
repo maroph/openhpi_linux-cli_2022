@@ -6,6 +6,7 @@ build text eol=lf
 #
 *.bash text eol=lf
 *.md text
+*.sh text eol=lf
 #
 *.jpg binary
 *.png binary
