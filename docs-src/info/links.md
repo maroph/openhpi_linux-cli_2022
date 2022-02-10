@@ -15,5 +15,8 @@
   Alpine Linux 3.12 mit einem Kernel 4.12
 - [Linux Manpages: die.net](https://linux.die.net/man/)
 - [Linux Manpages:man.cx](https://man.cx/)
+- [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)
+- [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
+- [Windows-Subsystem für Linux: Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
 
