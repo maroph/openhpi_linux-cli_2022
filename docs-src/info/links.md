@@ -10,6 +10,7 @@
 
 ## Linux:
 
+- [Debian 10 Administrationshandbuch](https://debian-handbook.info/browse/de-DE/stable/index.html)
 - [JSLinux](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
   Linux im Browser (Chrome, Edge, Firefox, ...)  
   Alpine Linux 3.12 mit einem Kernel 4.12
@@ -18,5 +19,7 @@
 - [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)
 - [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
+- [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
+- [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)
 - [Windows-Subsystem für Linux: Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
 

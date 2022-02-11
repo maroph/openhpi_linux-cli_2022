@@ -1,6 +1,8 @@
 # Bash: Strings
-Über Bash Variablen gibt es sehr viel zu sagen. Ich gebe deshalb hier nur einige
-Beispiele an, die ich des öfteren verwende.
+Über Bash Variablen gibt es sehr viel zu sagen. Eine kurze Übericht zu diesem Thema
+findet man hier: [Bash scripting cheatsheet](https://devhints.io/bash).
+
+Ich gebe hier nur einige Beispiele an, die ich des öfteren verwende.
 
 ## Variable einen Wert zuweisen und ausgeben
 ```bash

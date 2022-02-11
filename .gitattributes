@@ -4,8 +4,10 @@
 #
 build text eol=lf
 #
+*.adoc text
 *.bash text eol=lf
 *.md text
+*.py text
 *.sh text eol=lf
 #
 *.jpg binary
