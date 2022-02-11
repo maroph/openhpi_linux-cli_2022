@@ -18,8 +18,10 @@
 - [Linux Manpages:man.cx](https://man.cx/)
 - [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)
 - [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
+- [Rechte im Dateisystem](https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
 - [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
 - [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)
+- [Why are hard links not allowed for directories?](https://askubuntu.com/questions/210741/why-are-hard-links-not-allowed-for-directories)
 - [Windows-Subsystem für Linux: Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
 

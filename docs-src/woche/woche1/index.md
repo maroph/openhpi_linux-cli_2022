@@ -78,7 +78,7 @@ $ cd   : wechsele in das Homeverzeichnis der Kennung  (_/home/openhpi_)
 D.h. ich muss das folgende eingeben:
 
 ```bash
-$ /home/openhpi/linux_cli/week1-dir
+$ cd /home/openhpi/linux_cli/week1-dir
 ```
 
 Mit Hilfe des Verzeichniseintrags .. kann ich aber kurz schreiben
