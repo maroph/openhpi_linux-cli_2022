@@ -16,6 +16,7 @@ theme:
     icon:
         repo: fontawesome/brands/github
     features:
+        - navigation.indexes
         - navigation.instant
         - navigation.tracking
         - navigation.tabs
@@ -24,13 +25,16 @@ theme:
 nav:
     - Home: index.md
     - Woche:
-        - Woche1: woche/woche1/index.md
-        - Woche2: woche/woche2/index.md
+        - woche/index.md
+        - Woche1: woche/woche1.md
+        - Woche2: woche/woche2.md
     - Beispiele:
+        - samples/index.md
         - Bash Arrays: samples/bash_arrays.md
         - Bash Assoziative Arrays: samples/bash_assoziative_arrays.md
         - Bash Variablen: samples/bash_variables.md
         - date Kommando: samples/date_samples.md
+        - Verschiedenes: samples/misc.md
     - Info:
         - Über: info/about.md
         - Lizenz: info/license.md

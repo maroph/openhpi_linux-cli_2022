@@ -29,7 +29,7 @@ Ruft man dann sl auf
 
 sieht man eine Lokomotive über den Bildschirm fahren:
 
-![sl](./../../assets/sl.png)
+![sl](../assets/sl.png)
 
 
 ## Debian Paktetverwaltung
@@ -133,6 +133,14 @@ Verzeichnis, in dem man sich befindet, zur Variabeln PATH hinzufügen:
 $ PATH="$PATH:$(pwd)"
 ```
 Aber das ist natürlich nicht immer sinnvoll.
+
+Will man wissen, wo im Pfad ($PATH) das Kommando gefunden wurde, kann man das Kommando
+_type_ nutzen:
+
+```bash
+$ type ls
+ls is hashed (/bin/ls)
+```
 
 Nächster Versuch:
 
