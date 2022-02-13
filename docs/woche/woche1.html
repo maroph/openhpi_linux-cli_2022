@@ -855,6 +855,15 @@
 </code></pre></div>
 <p>sieht man eine Lokomotive über den Bildschirm fahren:</p>
 <p><img alt="sl" src="../assets/sl.png" /></p>
+<p>Hinweis: in der Regel ist das Verzeichnis /usr/games nicht im Suchpfad der Shell.
+Will man nur den Programmnamen ohne Pfad beim Aufruf angeben, gibt es zwei 
+Möglichkeiten:</p>
+<p>Den Suchpfad der Shell erweitern:</p>
+<div class="highlight"><pre><span></span><code>PATH=$PATH:/usr/games
+</code></pre></div>
+<p>Ein alias für das Programm anlegen</p>
+<div class="highlight"><pre><span></span><code>alias sl=&#39;/usr/games/sl&#39;
+</code></pre></div>
 <h2 id="debian-paktetverwaltung">Debian Paktetverwaltung</h2>
 <p>Weiß man nicht genau, in welchem Debian Paket ein Programm enthalten ist, kann
 man das Pakte mit Hilfe der <a href="https://packages.debian.org/index">Debian-Paketsuche</a></p>
@@ -1070,7 +1079,7 @@ Benutzer kann das Software auf dem Rechner installieren.</p>
   <small>
     
       Letztes Update:
-      2022-02-12
+      2022-02-13
     
   </small>
 </div>

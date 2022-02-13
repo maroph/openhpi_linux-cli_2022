@@ -11,6 +11,9 @@
 ## Linux:
 
 - [Debian 10 Administrationshandbuch](https://debian-handbook.info/browse/de-DE/stable/index.html)
+- [Debian mount commando](https://manpages.debian.org/bullseye/mount/mount.8.en.html)
+- [How to Mount a USB Drive in Debian](https://linuxhint.com/mount_usb_drive_debian/)
+- [How to mount partition with ntfs file system and read write access](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
 - [JSLinux](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
   Linux im Browser (Chrome, Edge, Firefox, ...)  
   Alpine Linux 3.12 mit einem Kernel 4.12

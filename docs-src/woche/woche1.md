@@ -31,6 +31,17 @@ sieht man eine Lokomotive über den Bildschirm fahren:
 
 ![sl](../assets/sl.png)
 
+Hinweis: in der Regel ist das Verzeichnis /usr/games nicht im Suchpfad der Shell.
+Will man nur den Programmnamen ohne Pfad beim Aufruf angeben, gibt es zwei 
+Möglichkeiten:
+
+Den Suchpfad der Shell erweitern:
+
+    PATH=$PATH:/usr/games
+
+Ein alias für das Programm anlegen
+
+    alias sl='/usr/games/sl'
 
 ## Debian Paktetverwaltung
 Weiß man nicht genau, in welchem Debian Paket ein Programm enthalten ist, kann
