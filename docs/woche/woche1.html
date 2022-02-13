@@ -446,6 +446,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-der-woche-1" class="md-nav__link">
+    Zusammenfassung der Woche 1
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -804,6 +811,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-der-woche-1" class="md-nav__link">
+    Zusammenfassung der Woche 1
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -991,6 +1005,65 @@ Die Shell ruft dieses Kommando auf und übergibt den Rest der Datei an das Komma
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>tar xvf week1-dir.tar.gz
 </code></pre></div>
 finden.</p>
+<h2 id="zusammenfassung-der-woche-1">Zusammenfassung der Woche 1</h2>
+<p>Linux verwendet, ähnlich wie Windows, ein 
+<a href="https://de.wikipedia.org/wiki/Dateisystem">Dateisystem</a> 
+mit Verzeichnissen und Dateien.</p>
+<p>Loggt man sich and der Console ein, oder öffnet in einer GUI ein Terminalfenster
+befindet man sich im sogenannten Homeverzeichnis der Kennung. Das Verzeichnis,
+in dem man sich gerade befindet, kann man sich mit dem Kommando <em>pwd</em> ansehen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>/home/openhpi
+</code></pre></div>
+<p>Mit dem Kommando <em>cd</em> kann man das Verzeichnis wechseln.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$ <span class="nb">cd</span> linux_cli
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>/home/openhpi/linux_cli
+</code></pre></div>
+<p>Es gibt 3 spezielle Möglichkeiten, das Kommando <em>cd</em> zu nutzen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>cd   : wechsel in das Homeverzeichnis
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>cd ~ : wechsel in das Homeverzeichnis
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>cd - : wechsel in das letzte Verzeichnis
+</code></pre></div>
+<p>Beispiel:  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>/home/openhpi
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>$ <span class="nb">cd</span> linux_cli
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>/home/openhpi/linux_cli
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>$ <span class="nb">cd</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>/home/openhpi
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>$ <span class="nb">cd</span> linux_cli
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>/home/openhpi/linux_cli
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>$ <span class="nb">cd</span> ~
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>/home/openhpi
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>$ <span class="nb">cd</span> linux_cli
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>/home/openhpi/linux_cli
+<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>$ <span class="nb">cd</span> week1-dir
+<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>/home/openhpi/linux_cli/week1-dir
+<a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>$ <span class="nb">cd</span> -
+<a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>/home/openhpi/linux_cli
+<a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a>$ <span class="nb">pwd</span>
+<a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a>/home/openhpi/linux_cli
+</code></pre></div>
+<p>Die in einem Verzeichns vorhandenen Verzeichnisse/Dateien kann man sich mit dem
+Kommando <a href="https://man.cx/ls(1)/de">ls</a> ansehen.</p>
+<p>In Linux gibt es eine Reihe von
+ <a href="https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html">Rechte im Dateisystem</a>.
+Diese Rechte kann man mit dem Kommando <a href="https://man.cx/chmod(1)/de">chmod</a>
+verändern.</p>
+<p>Zur Installation von Programmen benötigt man eine Administratorberechtigung. In
+einer Desktop Linux Umgebung ist in der Regle mindestens ein Benutzer so
+konfiguriert, dass er das Programm <a href="https://man.cx/sudo">sudo</a> aufrufen kann. Dieser
+Benutzer kann das Software auf dem Rechner installieren.</p>
+<p>Beispiel:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>sudo apt install fortune
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">

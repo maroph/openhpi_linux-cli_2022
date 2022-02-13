@@ -22,6 +22,7 @@
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
 - [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
 - [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)
+- [Wikipedia: Unix-Dateirechte](https://de.wikipedia.org/wiki/Unix-Dateirechte)
 - [Why are hard links not allowed for directories?](https://askubuntu.com/questions/210741/why-are-hard-links-not-allowed-for-directories)
 - [Windows-Subsystem für Linux: Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
 

@@ -256,3 +256,82 @@ Auspacken der TAR Datei:
 tar xvf week1-dir.tar.gz
 ```
 finden.
+
+## Zusammenfassung der Woche 1
+Linux verwendet, ähnlich wie Windows, ein 
+[Dateisystem](https://de.wikipedia.org/wiki/Dateisystem) 
+mit Verzeichnissen und Dateien.
+
+Loggt man sich and der Console ein, oder öffnet in einer GUI ein Terminalfenster
+befindet man sich im sogenannten Homeverzeichnis der Kennung. Das Verzeichnis,
+in dem man sich gerade befindet, kann man sich mit dem Kommando _pwd_ ansehen:
+
+
+```bash
+$ pwd
+/home/openhpi
+```
+
+Mit dem Kommando _cd_ kann man das Verzeichnis wechseln.
+
+```bash
+$ cd linux_cli
+$ pwd
+/home/openhpi/linux_cli
+```
+
+Es gibt 3 spezielle Möglichkeiten, das Kommando _cd_ zu nutzen:
+
+```
+cd   : wechsel in das Homeverzeichnis
+cd ~ : wechsel in das Homeverzeichnis
+cd - : wechsel in das letzte Verzeichnis
+```
+
+Beispiel:  
+
+```bash
+$ pwd
+/home/openhpi
+$ cd linux_cli
+$ pwd
+/home/openhpi/linux_cli
+$ cd
+$ pwd
+/home/openhpi
+$ cd linux_cli
+$ pwd
+/home/openhpi/linux_cli
+$ cd ~
+$ pwd
+/home/openhpi
+$ cd linux_cli
+$ pwd
+/home/openhpi/linux_cli
+$ cd week1-dir
+$ pwd
+/home/openhpi/linux_cli/week1-dir
+$ cd -
+/home/openhpi/linux_cli
+$ pwd
+/home/openhpi/linux_cli
+```
+
+Die in einem Verzeichns vorhandenen Verzeichnisse/Dateien kann man sich mit dem
+Kommando [ls](https://man.cx/ls(1)/de) ansehen.
+
+In Linux gibt es eine Reihe von
+ [Rechte im Dateisystem](https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html).
+Diese Rechte kann man mit dem Kommando [chmod](https://man.cx/chmod(1)/de)
+verändern.
+
+Zur Installation von Programmen benötigt man eine Administratorberechtigung. In
+einer Desktop Linux Umgebung ist in der Regle mindestens ein Benutzer so
+konfiguriert, dass er das Programm [sudo](https://man.cx/sudo) aufrufen kann. Dieser
+Benutzer kann das Software auf dem Rechner installieren.
+
+Beispiel:
+
+```bash
+sudo apt install fortune
+```

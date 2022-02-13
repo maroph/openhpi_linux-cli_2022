@@ -219,5 +219,20 @@ echo ""
 #
 ###############################################################################
 #
+echo "Wert einer Zahl erhöhen"
+echo "zahl=1"
+echo "echo \$zahl"
+echo "zahl=`expr \$zahl + 1`"
+echo "echo \$zahl"
+echo "---"
+#
+zahl=1
+echo $zahl
+zahl=`expr $zahl + 1`
+echo $zahl
+echo ""
+#
+###############################################################################
+#
 exit 0
 

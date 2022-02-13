@@ -115,6 +115,15 @@ do
 done
 ```
 
+## Wert einer Zahl erhöhen
+```bash
+zahl=1
+echo $zahl
+zahl=`expr $zahl + 1`
+echo $zahl
+echo ""
+```
+
 ---
 
 Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
