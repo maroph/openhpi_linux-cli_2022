@@ -12,8 +12,23 @@ $0            : Dateiname des aufgerufenen Shell Skripts
 $1, ..., $9   : die ersten 9 Argumente, die an das Shell Skript
                 übergeben wurden
 $$            : PID (Process Id) des Bash Prozesses
-$?            : Ergebnis des letzten Kommandos
+$?            : Exit Code des letzten Kommandos
+                (typischerweise ein Wert >= 0 und <= 127)
 $!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
+```
+
+Die Standard errno Werte sind als C/C++ Makro Definitionen in C/C++ Include
+Dateien abgelegt und haben die folgende Form:
+
+```c
+#define ENOENT           2      /* No such file or directory */
+```
+
+Auf einem Debian System findet man diese Makro Definitionen in den Dateien
+
+```
+/usr/include/asm-generic/errno-base.h
+/usr/include/asm-generic/errno.h
 ```
 
 ## Variable einen Wert zuweisen und ausgeben

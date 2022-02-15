@@ -20,8 +20,6 @@ echo $BASH_VERSION
 ## Struktur der Site
 Die Daten auf dieser Site sind folgendermaßen strukturiert:
 
-* docs  
-  Inhalt dieser [Site](https://maroph.github.io/openhpi_linux-cli_2022/)
 * docs-src  
   Markdown Sourcen dieser Site
 * LICENSE  
@@ -65,8 +63,8 @@ Für mein GitHub Repository habe ich die GitHub Page
 
 <https://maroph.github.io/openhpi_linux-cli_2022/>
 
-konfiguriert. Für diese GitHub Page werden die Daten aus dem Verzeichnis docs 
-im Branch main verwendet.
+konfiguriert. Für diese GitHub Page werden die Daten aus dem Verzeichnis / 
+im Branch gh-pages verwendet.
 
 Um diese Page zu aktualisieren, muss man die Änderungen im lokalen Git Repository
 committen und in das GitHub Repository pushen:
@@ -74,6 +72,7 @@ committen und in das GitHub Repository pushen:
 ```bash
 git commit -m "my commit message"
 git push
+./build deploy
 ```
 
 Nach einer relativ kurzen Zeit sind die Änderungen auf der GitHub Page zu sehen.
