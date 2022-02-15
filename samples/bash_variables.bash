@@ -19,6 +19,30 @@ echo ""
 #
 ###############################################################################
 #
+echo "Spezielle Bash Variablen"
+echo "echo \"Bash version                 : \${BASH_VERSION}\""
+echo "echo \"Skript Dateiname             : \$0\""
+echo "echo \"Bash pid                     : \$\$\""
+echo "ls -l . >/dev/null"
+echo "echo \"ls Exit Code                 : \$?\""
+echo "ls -l noExistinFile 2>/dev/null"
+echo "echo \"ls Exit Code                 : \$?\""
+echo "sleep 3 &"
+echo "echo \"pid des Hintergrungprozesses : \$!\""
+echo "---"
+echo "Bash version                 : ${BASH_VERSION}"
+echo "Skript Dateiname             : $0"
+echo "Bash pid                     : $$"
+ls -l . >/dev/null
+echo "ls Exit Code                 : $?"
+ls -l noExistinFile 2>/dev/null
+echo "ls Exit Code                 : $?"
+sleep 3 &
+echo "pid des Hintergrungprozesses : $!"
+echo ""
+#
+###############################################################################
+#
 echo "Variable einen Wert zuweisen und ausgeben"
 echo "msg=\"Hello World!\""
 echo "echo \"$msg\""
@@ -219,7 +243,7 @@ echo ""
 #
 ###############################################################################
 #
-echo "Wert einer Zahl erhöhen"
+echo "Wert einer Zahl erhöhen #1"
 echo "zahl=1"
 echo "echo \$zahl"
 echo "zahl=`expr \$zahl + 1`"
@@ -229,6 +253,18 @@ echo "---"
 zahl=1
 echo $zahl
 zahl=`expr $zahl + 1`
+echo $zahl
+echo ""
+#
+echo "Wert einer Zahl erhöhen #2"
+echo "zahl=1"
+echo "echo \$zahl"
+echo "zahl=\$((zahl + 1))"
+echo "echo \$zahl"
+echo "---"
+zahl=1
+echo $zahl
+zahl=$((zahl + 1))
 echo $zahl
 echo ""
 #

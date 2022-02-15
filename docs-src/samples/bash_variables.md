@@ -4,6 +4,18 @@ findet man hier: [Bash scripting cheatsheet](https://devhints.io/bash).
 
 Ich gebe hier nur einige Beispiele an, die ich des öfteren verwende.
 
+## Spezielle Bash Variablen
+
+```
+$BASH_VERSION : Version der verwendeten Bash
+$0            : Dateiname des aufgerufenen Shell Skripts
+$1, ..., $9   : die ersten 9 Argumente, die an das Shell Skript
+                übergeben wurden
+$$            : PID (Process Id) des Bash Prozesses
+$?            : Ergebnis des letzten Kommandos
+$!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
+```
+
 ## Variable einen Wert zuweisen und ausgeben
 ```bash
 msg="Hello World!"
@@ -120,6 +132,16 @@ done
 zahl=1
 echo $zahl
 zahl=`expr $zahl + 1`
+echo $zahl
+echo ""
+```
+
+Oder:
+
+```bash
+zahl=1
+echo $zahl
+zahl=$((zahl + 1))
 echo $zahl
 echo ""
 ```

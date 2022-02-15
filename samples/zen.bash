@@ -6,7 +6,7 @@ echo ""
 #
 count=0
 maxcount=10
-while [ ${count} -lt ${maxount} ]
+while [ ${count} -lt ${maxcount} ]
 do
     echo -n "einatmen "
     sleep 1
@@ -34,6 +34,7 @@ do
     echo  "."
     echo ""
 #
-    count=`expr $count + 1`
+    #count=`expr $count + 1`
+    count=$((count + 1))
 done
 

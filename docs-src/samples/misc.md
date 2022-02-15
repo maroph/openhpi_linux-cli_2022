@@ -8,10 +8,10 @@ Schleife:
 ```bash
 count=0
 maxcount=10
-while [ ${count} -lt ${maxount} ]
+while [ ${count} -lt ${maxcount} ]
 do
     ...
-    count=`expr $count + 1`
+    count=$((count + 1))
 done
 ```
 

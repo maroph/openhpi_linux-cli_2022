@@ -1,6 +1,6 @@
 # Woche 1
 
-## Tastenkombinationen
+## GUI Desktop Tastenkombinationen
 
 ```
 Strg + C
@@ -8,6 +8,7 @@ Strg + D
 Strg + Shift + C        in das Clipboard kopieren
 Strg + Shift + V        aus dem Clipboard einfügen
 Strg + L                Bildschirm leeren
+Strg + Alt/Shift + T    Terminalfenster öffnen (Alt oder Shift sollte funktionieren)
 Tab                     automatische Vervollständigung
 Pfeiltasten oben/unten  zuletzt benutze Befehle
 man <befehl>            öffnet das Manual für den entsprechenden Befehl

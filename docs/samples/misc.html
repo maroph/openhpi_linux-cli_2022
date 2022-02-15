@@ -692,10 +692,10 @@ ist ein kleines Skript zur Entspannung. Wesentlicher Teil des Skripts ist eine
 Schleife:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">count</span><span class="o">=</span><span class="m">0</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">maxcount</span><span class="o">=</span><span class="m">10</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">while</span> <span class="o">[</span> <span class="si">${</span><span class="nv">count</span><span class="si">}</span> -lt <span class="si">${</span><span class="nv">maxount</span><span class="si">}</span> <span class="o">]</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">while</span> <span class="o">[</span> <span class="si">${</span><span class="nv">count</span><span class="si">}</span> -lt <span class="si">${</span><span class="nv">maxcount</span><span class="si">}</span> <span class="o">]</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">do</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ...
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="nv">count</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$count</span> + <span class="m">1</span><span class="sb">`</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="nv">count</span><span class="o">=</span><span class="k">$((</span>count <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">done</span>
 </code></pre></div>
 <p>Ablauf: so lange die Variable count kleiner als die Variable maxcount ist, wird die 
