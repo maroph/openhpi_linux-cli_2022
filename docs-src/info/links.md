@@ -12,6 +12,7 @@
 
 - [Debian 10 Administrationshandbuch](https://debian-handbook.info/browse/de-DE/stable/index.html)
 - [Debian mount commando](https://manpages.debian.org/bullseye/mount/mount.8.en.html)
+- [How to Change Colors on LS in Bash](https://linuxhint.com/ls_colors_bash/)
 - [How to Mount a USB Drive in Debian](https://linuxhint.com/mount_usb_drive_debian/)
 - [How to mount partition with ntfs file system and read write access](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
 - [JSLinux](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
@@ -23,12 +24,20 @@
 - [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
 - [Rechte im Dateisystem](https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
-- [scipt manpage](https://man.cx/script(1)/de)
-- [screen manpage](https://man.cx/screen)
-- [screen doc](https://www.gnu.org/software/screen/manual/)
 - [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
 - [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)
 - [Wikipedia: Unix-Dateirechte](https://de.wikipedia.org/wiki/Unix-Dateirechte)
 - [Why are hard links not allowed for directories?](https://askubuntu.com/questions/210741/why-are-hard-links-not-allowed-for-directories)
 - [Windows-Subsystem für Linux: Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
+
+## Tools
+
+- [awk user's guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+- [ncat manpage](https://man.cx/ncat)
+- [ncat user's guide]( https://nmap.org/ncat/guide/
+- [RegEx 101](https://regex101.com/)
+- [scipt manpage](https://man.cx/script(1)/de)
+- [screen manpage](https://man.cx/screen)
+- [screen user's manual](https://www.gnu.org/software/screen/manual/)
+- [sed user's guide](https://www.gnu.org/software/sed/manual/sed.html)
 

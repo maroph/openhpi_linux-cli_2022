@@ -31,6 +31,44 @@ Auf einem Debian System findet man diese Makro Definitionen in den Dateien
 /usr/include/asm-generic/errno.h
 ```
 
+## Environmentvariablen
+Shellvariablen sind nur in der aktuelle Shell bekannt. Environmentvariablen dagegen
+werden an alle Subprozesse der Shell vererbt. Ein Subprozess ist ein Prozess, der
+von der aktuellen Shell gestartet wurde. Eine Variable wird zu einer 
+Environmentvariablen, indem man sie mit _export_ deklariert:
+
+```bash
+export ENV_VARIABLE="Hallo"
+```
+
+Oder auch länger:
+
+```bash
+ENV_VARIABLE="Hallo"
+export ENV_VARIABLE
+```
+
+All derzeit deklarierten Environmentvariablen kann man sich mit dem folgenden 
+Kommando ausgeben lassen:
+
+```bash
+env
+```
+
+Beispiel:
+
+```bash
+$ msg="Hello"
+$ echo "#!/bin/bash" >./tmp.bash
+$ echo "echo "msg:\$msg\"" >>./tmp.bash
+$ chmod 700 ./tmp.bash
+$ ./tmp.bash
+msg:
+$ export msg
+$ ./tmp.bash
+msg:Hello
+```
+
 ## Variable einen Wert zuweisen und ausgeben
 ```bash
 msg="Hello World!"

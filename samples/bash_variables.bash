@@ -43,6 +43,29 @@ echo ""
 #
 ###############################################################################
 #
+echo "Environmentvariablen"
+echo "msg=\"Hello\""
+echo "echo \"#!/bin/bash\" >./tmp.bash"
+echo "echo \"echo \"msg:\\\$msg\\\"\" >>./tmp.bash"
+echo "chmod 700 ./tmp.bash"
+echo "./tmp.bash"
+echo "export msg"
+echo "./tmp.bash"
+echo "rm -f ./tmp.bash"
+echo "---"
+#
+msg="Hello"
+echo "#!/bin/bash" >./tmp.bash
+echo "echo \"msg:\$msg\"" >>./tmp.bash
+chmod 700 ./tmp.bash
+./tmp.bash
+export msg
+./tmp.bash
+rm -f ./tmp.bash
+echo ""
+#
+###############################################################################
+#
 echo "Variable einen Wert zuweisen und ausgeben"
 echo "msg=\"Hello World!\""
 echo "echo \"$msg\""

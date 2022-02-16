@@ -1,4 +1,11 @@
 # Woche 1
+Themen der Woche 1
+
+- Was ist Linux und was ist Unix?
+- Was bedeuten die Begriffe Terminal, Shell, Terminalemulator und Konsole?
+- Wie findet man sich in der Kommandozeile zurecht?
+- Wie ist ein Kommando aufgebaut?
+- Welche sind die wichtigsten Kommandos?
 
 ## GUI Desktop Tastenkombinationen
 
