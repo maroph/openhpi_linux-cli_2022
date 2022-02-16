@@ -493,6 +493,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#environmentvariablen" class="md-nav__link">
+    Environmentvariablen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#variable-einen-wert-zuweisen-und-ausgeben" class="md-nav__link">
     Variable einen Wert zuweisen und ausgeben
   </a>
@@ -786,6 +793,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#environmentvariablen" class="md-nav__link">
+    Environmentvariablen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#variable-einen-wert-zuweisen-und-ausgeben" class="md-nav__link">
     Variable einen Wert zuweisen und ausgeben
   </a>
@@ -941,95 +955,121 @@ Dateien abgelegt und haben die folgende Form:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/usr/include/asm-generic/errno-base.h
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/usr/include/asm-generic/errno.h
 </code></pre></div>
+<h2 id="environmentvariablen">Environmentvariablen</h2>
+<p>Shellvariablen sind nur in der aktuelle Shell bekannt. Environmentvariablen dagegen
+werden an alle Subprozesse der Shell vererbt. Ein Subprozess ist ein Prozess, der
+von der aktuellen Shell gestartet wurde. Eine Variable wird zu einer 
+Environmentvariablen, indem man sie mit <em>export</em> deklariert:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">export</span> <span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
+</code></pre></div>
+<p>Oder auch länger:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">export</span> ENV_VARIABLE
+</code></pre></div>
+<p>All derzeit deklarierten Environmentvariablen kann man sich mit dem folgenden 
+Kommando ausgeben lassen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>env
+</code></pre></div>
+<p>Beispiel:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ <span class="nb">echo</span> <span class="s2">&quot;#!/bin/bash&quot;</span> &gt;./tmp.bash
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>$ <span class="nb">echo</span> <span class="s2">&quot;echo &quot;</span>msg:<span class="se">\$</span>msg<span class="se">\&quot;</span><span class="s2">&quot; &gt;&gt;./tmp.bash</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>$<span class="s2"> chmod 700 ./tmp.bash</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$<span class="s2"> ./tmp.bash</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="s2">msg:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>$<span class="s2"> export msg</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$<span class="s2"> ./tmp.bash</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="s2">msg:Hello</span>
+</code></pre></div>
 <h2 id="variable-einen-wert-zuweisen-und-ausgeben">Variable einen Wert zuweisen und ausgeben</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$msg</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$msg</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="lange-der-zeichenkette-in-einer-variablen-msg">Länge der Zeichenkette in einer Variablen: ${#msg}</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span> <span class="si">${#</span><span class="nv">msg</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span> <span class="si">${#</span><span class="nv">msg</span><span class="si">}</span>
 </code></pre></div>
 <h2 id="variable-schreibschutzen-readonly">Variable schreibschützen (readonly)</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">msgr</span><span class="o">=</span><span class="s2">&quot;Hello World! #1&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$msgr</span><span class="s2">&quot;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Hello World! <span class="c1">#1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">msgr</span><span class="o">=</span><span class="s2">&quot;Hello World! #1&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$msgr</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Hello World! <span class="c1">#1</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">declare</span> -r msgr
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">msgr</span><span class="o">=</span><span class="s2">&quot;Hello World! #2&quot;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>samples/bash_variables.bash: line <span class="m">49</span>: msgr: <span class="nb">readonly</span> variable
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">declare</span> -r msgr
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nv">msgr</span><span class="o">=</span><span class="s2">&quot;Hello World! #2&quot;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>samples/bash_variables.bash: line <span class="m">49</span>: msgr: <span class="nb">readonly</span> variable
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$msgr</span><span class="s2">&quot;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Hello World! <span class="c1">#1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$msgr</span><span class="s2">&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Hello World! <span class="c1">#1</span>
 </code></pre></div>
 <h2 id="bilden-eines-teilstrings">Bilden eines Teilstrings</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">msg</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">msg</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <p>Es werden die Werte mit dem Index 0-1 ausgegeben.
 Der erste Wert (1) gibt an, ab welchem Index die Ausgabe bebinnt und der zweite
 Wert (2) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll.</p>
 <h2 id="ist-teilstring-in-einem-string-enthalten">Ist Teilstring in einem String enthalten</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">string</span><span class="o">=</span><span class="s1">&#39;A long string&#39;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">if</span> <span class="o">[[</span> <span class="nv">$string</span> <span class="o">==</span> *<span class="s2">&quot;A long&quot;</span>* <span class="o">]]</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">then</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;&#39;A long&#39; is part of the string&quot;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">fi</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">string</span><span class="o">=</span><span class="s1">&#39;A long string&#39;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">if</span> <span class="o">[[</span> <span class="nv">$string</span> <span class="o">==</span> *<span class="s2">&quot;A long&quot;</span>* <span class="o">]]</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">then</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;&#39;A long&#39; is part of the string&quot;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">fi</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">string</span><span class="o">=</span><span class="s1">&#39;A long string&#39;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">if</span> <span class="o">[[</span> <span class="nv">$string</span> !<span class="o">=</span> *<span class="s2">&quot;A short&quot;</span>* <span class="o">]]</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">then</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;&#39;A short&#39; is not part of the string&quot;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">fi</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">string</span><span class="o">=</span><span class="s1">&#39;A long string&#39;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">if</span> <span class="o">[[</span> <span class="nv">$string</span> !<span class="o">=</span> *<span class="s2">&quot;A short&quot;</span>* <span class="o">]]</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">then</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;&#39;A short&#39; is not part of the string&quot;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">fi</span>
 </code></pre></div>
 <h2 id="ausgabe-eines-programms-in-einer-variablen-speichern">Ausgabe eines Programms in einer Variablen speichern</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">issue</span><span class="o">=</span><span class="sb">`</span>cat /etc/issue<span class="sb">`</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$issue</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">issue</span><span class="o">=</span><span class="sb">`</span>cat /etc/issue<span class="sb">`</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$issue</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="ausgabe-eines-programms-in-einer-variablen-speichern_1">Ausgabe eines Programms in einer Variablen speichern</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">issue</span><span class="o">=</span><span class="k">$(</span>cat /etc/issue<span class="k">)</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$issue</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nv">issue</span><span class="o">=</span><span class="k">$(</span>cat /etc/issue<span class="k">)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$issue</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="erstes-zeichen-in-einen-grobuchstaben-umwandeln">Erstes Zeichen in einen Großbuchstaben umwandeln</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">^</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">^</span><span class="si">}</span>
 </code></pre></div>
 <h2 id="alle-kleinbuchstaben-in-grobuchstaben-umwandeln">Alle Kleinbuchstaben in Großbuchstaben umwandeln</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">^^</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">^^</span><span class="si">}</span>
 </code></pre></div>
 <h3 id="alternative-methode-alle-kleinbuchstaben-in-grobuchstaben-umwandeln">Alternative Methode: Alle Kleinbuchstaben in Großbuchstaben umwandeln</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">echo</span> <span class="nv">$uuid</span> <span class="p">|</span> tr <span class="s1">&#39;[:lower:]&#39;</span> <span class="s1">&#39;[:upper:]&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">echo</span> <span class="nv">$uuid</span> <span class="p">|</span> tr <span class="s1">&#39;[:lower:]&#39;</span> <span class="s1">&#39;[:upper:]&#39;</span>
 </code></pre></div>
 <h2 id="erstes-zeichen-in-einen-kleinbuchstaben-umwandeln">Erstes Zeichen in einen Kleinbuchstaben umwandeln</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">,</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">,</span><span class="si">}</span>
 </code></pre></div>
 <h2 id="alle-grobuchstaben-in-kleinbuchstaben-umwandeln">Alle Großbuchstaben in Kleinbuchstaben umwandeln</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">,,</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">echo</span> <span class="si">${</span><span class="nv">msg</span><span class="p">,,</span><span class="si">}</span>
 </code></pre></div>
 <h3 id="alternative-methode-alle-grobuchstaben-in-kleinbuchstaben-umwandeln">Alternative Methode: Alle Großbuchstaben in Kleinbuchstaben umwandeln</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">echo</span> <span class="nv">$msg</span> <span class="p">|</span> tr <span class="s1">&#39;[:upper:]&#39;</span> <span class="s1">&#39;[:lower:]&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">echo</span> <span class="nv">$msg</span> <span class="p">|</span> tr <span class="s1">&#39;[:upper:]&#39;</span> <span class="s1">&#39;[:lower:]&#39;</span>
 </code></pre></div>
 <h2 id="prufen-ob-eine-variable-eine-positive-zahl-ohne-vorzeichen-enthalt">Prüfen, ob eine Variable eine positive Zahl ohne Vorzeichen + enthält</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">declare</span> -a <span class="nv">inp</span><span class="o">=(</span>a -1 <span class="m">0</span> +1 <span class="m">1</span><span class="o">)</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">for</span> n <span class="k">in</span> <span class="si">${</span><span class="nv">inp</span><span class="p">[@]</span><span class="si">}</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">do</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="k">if</span> ! <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span> <span class="o">=</span>~ ^<span class="o">[</span><span class="m">1</span>-9<span class="o">][</span><span class="m">0</span>-9<span class="o">]</span>*$ <span class="o">]]</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="k">then</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>        <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2"> - keine positive Zahl Zahl ohne Vorzeichen +&quot;</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="k">else</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>        <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2"> - positive Zahl Zahl ohne Vorzeichen +&quot;</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="k">fi</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="k">done</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">declare</span> -a <span class="nv">inp</span><span class="o">=(</span>a -1 <span class="m">0</span> +1 <span class="m">1</span><span class="o">)</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">for</span> n <span class="k">in</span> <span class="si">${</span><span class="nv">inp</span><span class="p">[@]</span><span class="si">}</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="k">do</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    <span class="k">if</span> ! <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span> <span class="o">=</span>~ ^<span class="o">[</span><span class="m">1</span>-9<span class="o">][</span><span class="m">0</span>-9<span class="o">]</span>*$ <span class="o">]]</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>    <span class="k">then</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>        <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2"> - keine positive Zahl Zahl ohne Vorzeichen +&quot;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    <span class="k">else</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>        <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2"> - positive Zahl Zahl ohne Vorzeichen +&quot;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    <span class="k">fi</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="k">done</span>
 </code></pre></div>
 <h2 id="wert-einer-zahl-erhohen">Wert einer Zahl erhöhen</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nv">zahl</span><span class="o">=</span><span class="m">1</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nv">zahl</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$zahl</span> + <span class="m">1</span><span class="sb">`</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">zahl</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="nv">zahl</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$zahl</span> + <span class="m">1</span><span class="sb">`</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 </code></pre></div>
 <p>Oder:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nv">zahl</span><span class="o">=</span><span class="m">1</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nv">zahl</span><span class="o">=</span><span class="k">$((</span>zahl <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">zahl</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="nv">zahl</span><span class="o">=</span><span class="k">$((</span>zahl <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="nb">echo</span> <span class="nv">$zahl</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
 </code></pre></div>
 <hr />
 <p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
@@ -1040,7 +1080,7 @@ Wert (2) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll
   <small>
     
       Letztes Update:
-      2022-02-15
+      2022-02-16
     
   </small>
 </div>
