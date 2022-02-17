@@ -5,6 +5,7 @@
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 - [Bash FAQ](https://mywiki.wooledge.org/BashFAQ/)
 - [Bash scripting cheatsheet](https://devhints.io/bash)
+- [Pure Bash Bible](https://github.com/tcauduro/pure-bash-bible)
 - [Rheinwerk Linux](https://openbook.rheinwerk-verlag.de/linux/linux_kap11_001.html)
 - [SelfLinux](https://www.selflinux.org/selflinux/html/shellprogrammierung.html)
 
@@ -23,6 +24,8 @@
 - [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)
 - [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
 - [Rechte im Dateisystem](https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html)
+- [ Regular-Expressions.info](https://www.regular-expressions.info/)
+- [Reguläre Ausdrücke in der Praxis](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck#Regul%C3%A4re_Ausdr%C3%BCcke_in_der_Praxis)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
 - [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
 - [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)
