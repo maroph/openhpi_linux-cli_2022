@@ -5,6 +5,10 @@ Themen der Woche 2
 - Konsolenanwendungen
 - Komfortabel in der Kommandozeile
 
+In den Videos wird die folgende Beispieldatei genutzt:
+
+- [rezept.txt](https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/week2-dir/rezept.txt)
+
 ## Standard Streams
 
 - stdin 

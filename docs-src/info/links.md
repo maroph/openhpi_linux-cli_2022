@@ -24,6 +24,7 @@
 - [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)
 - [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
 - [Rechte im Dateisystem](https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html)
+- [RegexLearn](https://regexlearn.com/)
 - [ Regular-Expressions.info](https://www.regular-expressions.info/)
 - [Reguläre Ausdrücke in der Praxis](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck#Regul%C3%A4re_Ausdr%C3%BCcke_in_der_Praxis)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
