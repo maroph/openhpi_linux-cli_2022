@@ -28,6 +28,7 @@
 - [ Regular-Expressions.info](https://www.regular-expressions.info/)
 - [Reguläre Ausdrücke in der Praxis](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck#Regul%C3%A4re_Ausdr%C3%BCcke_in_der_Praxis)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
+- [Unicode Collation Algorithm](https://unicode.org/reports/tr10/)
 - [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
 - [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)
 - [Wikipedia: Unix-Dateirechte](https://de.wikipedia.org/wiki/Unix-Dateirechte)

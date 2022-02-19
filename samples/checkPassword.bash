@@ -23,7 +23,7 @@
 ###############################################################################
 #
 declare -r SCRIPT_NAME=`basename $0`
-declare -r VERSION="$SCRIPT_NAME  1  (10-FEB-2022)"
+declare -r VERSION="$SCRIPT_NAME  1  (19-FEB-2022)"
 #
 ###############################################################################
 #
@@ -137,13 +137,13 @@ fi
 #
 if [ -s ./${SCRIPT_NAME}.txt ]
 then
-    cat ./${SCRIPT_NAME}.txt | grep ${rest} >/dev/null
+    grep ${rest} ./${SCRIPT_NAME}.txt >/dev/null
     if [ $? -ne 0 ]
     then
         echo "${SCRIPT_NAME}: password not found"
     else
         echo -n "${SCRIPT_NAME}: number of hits : "
-        cat ./${SCRIPT_NAME}.txt | grep ${rest} | sed -e 's/^.*://'
+        grep ${rest} ./${SCRIPT_NAME}.txt | sed -e 's/^.*://'
     fi
 else
     echo "${SCRIPT_NAME}: no data received"
