@@ -16,6 +16,7 @@
 - [How to Change Colors on LS in Bash](https://linuxhint.com/ls_colors_bash/)
 - [How to Mount a USB Drive in Debian](https://linuxhint.com/mount_usb_drive_debian/)
 - [How to mount partition with ntfs file system and read write access](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
+- [Jobs im Griff mit jobs, bg, fg und &](https://www.linux-community.de/ausgaben/easylinux/2009/03/jobs-im-griff-mit-jobs-bg-fg-und/)
 - [JSLinux](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
   Linux im Browser (Chrome, Edge, Firefox, ...)  
   Alpine Linux 3.12 mit einem Kernel 4.12

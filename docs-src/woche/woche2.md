@@ -27,6 +27,73 @@ Filter sind Programme, die Daten von stdin lesen und nach stdout ausgeben.
 Pipes verbinden 2 oder mehr Filter. Dabei wird die stdout Ausgabe des Vorgängers
 an stdin Eingabe des Nachfolgers weitergeleitet.
 
+## Hintergrundprozesse
+
+Zum Thema jobs (Vodergrund-/Hintergrundprozesse) gibt es einen kurzen 
+Übersichtsartikel: 
+[Jobs im Griff mit jobs, bg, fg und &](https://www.linux-community.de/ausgaben/easylinux/2009/03/jobs-im-griff-mit-jobs-bg-fg-und/).
+
+Ergänzend kann man in der Shell noch folgendes nutzen: nach dem Starten eines 
+Kommandos/Prozesses im Hintergrund kann man sich seine Prozess ID (pid) über die 
+Variable $! holen.
+
+```bash
+sleep 100 &
+bgpid=$!
+```
+
+Die PID des laufenden Shell Prozesses bekommt man über die Variable $$. Wenn man auf 
+das Ende eine Hintergrundprozesses warten will, geht das über das Kommando wait
+
+```bash
+wait $bgpid
+```
+
+Wie erkenne ich, das ein Prozess ein Hintergrundprozesse meiner Shell ist?  
+Die PPID (Parent PID) des Hintergrundprozesses verweist auf die PID meines Shell
+Prozesses.
+
+Jetzt alles zusammen:
+
+```bash
+sleep 3 &
+bgpid=$!
+echo "pid   : $$"
+echo "bgpid : $bgpid"
+echo ""
+ps -opid,ppid,cmd
+echo "----------"
+#
+echo ""
+wait $bgpid
+ps -opid,ppid,cmd
+echo "----------"
+```
+
+Die Ausgabe sieht dann im Wesentlichen so aus (die Prozesse oberhalb von -bash 
+habe ich aus der Liste gelöscht):
+
+```
+pid   : 1724923
+bgpid : 1724924
+
+    PID    PPID CMD
+1724826 1724825 -bash
+1724923 1724826 /bin/bash ./xx
+1724924 1724923 sleep 3
+1724925 1724923 ps -opid,ppid,cmd
+----------
+
+    PID    PPID CMD
+1724826 1724825 -bash
+1724923 1724826 /bin/bash ./xx
+1724926 1724923 ps -opid,ppid,cmd
+----------
+```
+
+Der sleep Hintergrundprozess hat die PID 1724924 und die PPID 1724923. Das ist die 
+PID von meinem laufenden Skript xx.
+
 ## Kommandos verketten
 Man kann in einer Anweisung mehrere Kommandos angeben (verketten). Da jedes 
 Kommando bei seiner Beendigung einen Exit Code zurückliefert, kann man mit Hilfe 
