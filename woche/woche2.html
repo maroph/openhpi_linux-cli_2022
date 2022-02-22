@@ -407,6 +407,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hintergrundprozesse" class="md-nav__link">
+    Hintergrundprozesse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kommandos-verketten" class="md-nav__link">
     Kommandos verketten
   </a>
@@ -765,6 +772,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hintergrundprozesse" class="md-nav__link">
+    Hintergrundprozesse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kommandos-verketten" class="md-nav__link">
     Kommandos verketten
   </a>
@@ -875,6 +889,57 @@
 <h2 id="pipes-pipelines">Pipes (Pipelines)</h2>
 <p>Pipes verbinden 2 oder mehr Filter. Dabei wird die stdout Ausgabe des Vorgängers
 an stdin Eingabe des Nachfolgers weitergeleitet.</p>
+<h2 id="hintergrundprozesse">Hintergrundprozesse</h2>
+<p>Zum Thema jobs (Vodergrund-/Hintergrundprozesse) gibt es einen kurzen 
+Übersichtsartikel: 
+<a href="https://www.linux-community.de/ausgaben/easylinux/2009/03/jobs-im-griff-mit-jobs-bg-fg-und/">Jobs im Griff mit jobs, bg, fg und &amp;</a>.</p>
+<p>Ergänzend kann man in der Shell noch folgendes nutzen: nach dem Starten eines 
+Kommandos/Prozesses im Hintergrund kann man sich seine Prozess ID (pid) über die 
+Variable $! holen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sleep <span class="m">100</span> <span class="p">&amp;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">bgpid</span><span class="o">=</span><span class="nv">$!</span>
+</code></pre></div>
+<p>Die PID des laufenden Shell Prozesses bekommt man über die Variable $$. Wenn man auf 
+das Ende eine Hintergrundprozesses warten will, geht das über das Kommando wait</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">wait</span> <span class="nv">$bgpid</span>
+</code></pre></div>
+<p>Wie erkenne ich, das ein Prozess ein Hintergrundprozesse meiner Shell ist?<br />
+Die PPID (Parent PID) des Hintergrundprozesses verweist auf die PID meines Shell
+Prozesses.</p>
+<p>Jetzt alles zusammen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sleep <span class="m">3</span> <span class="p">&amp;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">bgpid</span><span class="o">=</span><span class="nv">$!</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">echo</span> <span class="s2">&quot;pid   : </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">echo</span> <span class="s2">&quot;bgpid : </span><span class="nv">$bgpid</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ps -opid,ppid,cmd
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">echo</span> <span class="s2">&quot;----------&quot;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">#</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">wait</span> <span class="nv">$bgpid</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>ps -opid,ppid,cmd
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">echo</span> <span class="s2">&quot;----------&quot;</span>
+</code></pre></div>
+<p>Die Ausgabe sieht dann im Wesentlichen so aus (die Prozesse oberhalb von -bash 
+habe ich aus der Liste gelöscht):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pid   : 1724923
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>bgpid : 1724924
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    PID    PPID CMD
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>1724826 1724825 -bash
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>1724923 1724826 /bin/bash ./xx
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>1724924 1724923 sleep 3
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>1724925 1724923 ps -opid,ppid,cmd
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>----------
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    PID    PPID CMD
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>1724826 1724825 -bash
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>1724923 1724826 /bin/bash ./xx
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>1724926 1724923 ps -opid,ppid,cmd
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>----------
+</code></pre></div>
+<p>Der sleep Hintergrundprozess hat die PID 1724924 und die PPID 1724923. Das ist die 
+PID von meinem laufenden Skript xx.</p>
 <h2 id="kommandos-verketten">Kommandos verketten</h2>
 <p>Man kann in einer Anweisung mehrere Kommandos angeben (verketten). Da jedes 
 Kommando bei seiner Beendigung einen Exit Code zurückliefert, kann man mit Hilfe 
@@ -883,35 +948,35 @@ dieses Wertes die Abarbeitung der Verkettung steuern.</p>
 Kommandos in der Shell mit der Variablen $? abgefragt werden. Dabei bedeutet 0 ein
 erfolgreiches Ende des Kommandos und ungleich 0, das ein Fehler im Ablauf des
 Kommandos aufgetreten ist.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ ls
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>week1-dir
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ <span class="nb">echo</span> <span class="nv">$?</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="m">0</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ ls
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>week1-dir
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$ <span class="nb">echo</span> <span class="nv">$?</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="m">0</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ ls unbekannteDatei
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ls: cannot access <span class="s1">&#39;unbekannteDatei&#39;</span>: No such file or directory
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ <span class="nb">echo</span> <span class="nv">$?</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="m">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ ls unbekannteDatei
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ls: cannot access <span class="s1">&#39;unbekannteDatei&#39;</span>: No such file or directory
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$ <span class="nb">echo</span> <span class="nv">$?</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="m">2</span>
 </code></pre></div>
 <h3 id="kommandos-bis-zum-ersten-fehler-ausfuhren">Kommandos bis zum ersten Fehler ausführen</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>kommando_1 &amp;&amp; kommando_2 &amp;&amp; ... &amp;&amp; kommando_n
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kommando_1 &amp;&amp; kommando_2 &amp;&amp; ... &amp;&amp; kommando_n
 </code></pre></div>
 <p>Die Kommandos werden nacheinander ausgeführt, bis ein Fehler in einem Kommando
 auftritt.</p>
 <p>Beispiel:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls datei1 <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;wird nur angezeigt, wenn es datei1 gibt&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls datei1 <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;wird nur angezeigt, wenn es datei1 gibt&quot;</span>
 </code></pre></div>
 <h3 id="kommandos-bis-zum-ersten-erfolg-ausfuhren">Kommandos bis zum ersten Erfolg ausführen</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>kommando_1 || kommando_2 || ... || kommando_n
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>kommando_1 || kommando_2 || ... || kommando_n
 </code></pre></div>
 <p>Die Kommandos werden nacheinander ausgeführt, bis das erste Kommando erfolgreich
 ausgeführt wurde.</p>
 <p>Beispiel:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ls datei1 <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;wird nur angezeigt, wenn es datei1 nicht gibt&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ls datei1 <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;wird nur angezeigt, wenn es datei1 nicht gibt&quot;</span>
 </code></pre></div>
 <h3 id="kommandos-verketten_1">Kommandos verketten</h3>
 <p>Mit dem Zeichen ; können Kommandos verkettet werden</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kommando_1 ; kommando_2 ; ... ; kommando_n
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>kommando_1 ; kommando_2 ; ... ; kommando_n
 </code></pre></div>
 Alle Kommandos werden nacheinander ausgeführt - egal ob ein Fehler aufgetreten ist 
 oder nicht.</p>
@@ -921,15 +986,15 @@ oder nicht.</p>
 werden an alle Subprozesse der Shell vererbt. Ein Subprozess ist ein Prozess, der
 von der aktuellen Shell gestartet wurde. Eine Variable wird zu einer
 Environmentvariablen, indem man sie mit <em>export</em> deklariert:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span> <span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">export</span> <span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
 </code></pre></div>
 <p>Oder auch länger:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span> ENV_VARIABLE
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">export</span> ENV_VARIABLE
 </code></pre></div>
 <p>All derzeit deklarierten Environmentvariablen kann man sich mit dem folgenden
 Kommando ausgeben lassen:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>env
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>env
 </code></pre></div>
 <p>Die folgenden Environmentvariablen sind in der Shell immer gesetzt:</p>
 <ul>
@@ -941,23 +1006,23 @@ Kommando ausgeben lassen:</p>
 </ul>
 <h3 id="alias-unalias">alias / unalias</h3>
 <p>Mit <em>alias</em> kann man sich ein eigenes Kommando builden.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">alias</span> <span class="nv">bilder</span><span class="o">=</span><span class="s1">&#39;cd $HOME/Bilder;pwd&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">alias</span> <span class="nv">bilder</span><span class="o">=</span><span class="s1">&#39;cd $HOME/Bilder;pwd&#39;</span>
 </code></pre></div>
 <p>Gibt man <em>ll</em> ein, wird das Kommando <em>ls -l</em> ausgeführt. Gibt man bilder ein, wird
 die Kommandoverkettung <em>cd $HOME/Bilder;pwd</em> ausgeführt.</p>
 <p>Mit <em>unalias</em> kann man ein vorher erzeugtes Alias läschen.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">unalias</span> ll
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">unalias</span> ll
 </code></pre></div>
 <p>Gibt man nur <em>alias</em> ein, werden alle deklarierten Aliases angezeigt.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">alias</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">alias</span>
 </code></pre></div>
 <h3 id="history">History</h3>
 <p>Die Shell führt eine History der aufgerufenen Kommandos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>history     : anzeigen der History
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Strg + R    : suchen in History
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>!!          : letztes Komando wiederholen
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Kommando !! : Kommando mit dem letzten Kommando als Argument ausführen
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>history     : anzeigen der History
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Strg + R    : suchen in History
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>!!          : letztes Komando wiederholen
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Kommando !! : Kommando mit dem letzten Kommando als Argument ausführen
 </code></pre></div>
 
   <hr>
@@ -965,7 +1030,7 @@ die Kommandoverkettung <em>cd $HOME/Bilder;pwd</em> ausgeführt.</p>
   <small>
     
       Letztes Update:
-      2022-02-17
+      2022-02-22
     
   </small>
 </div>
