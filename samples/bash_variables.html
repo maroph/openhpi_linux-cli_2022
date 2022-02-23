@@ -943,10 +943,15 @@ findet man hier: <a href="https://devhints.io/bash">Bash scripting cheatsheet</a
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$0            : Dateiname des aufgerufenen Shell Skripts
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$1, ..., $9   : die ersten 9 Argumente, die an das Shell Skript
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                übergeben wurden
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$$            : PID (Process Id) des Bash Prozesses
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>$?            : Exit Code des letzten Kommandos
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                (typischerweise ein Wert &gt;= 0 und &lt;= 127)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>$!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$#            : Anzahl der an ein Skript übergebenen Argumente
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>$*            : Alle Argumente als ein String (Nutzung: &quot;$*&quot;)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>$@            : Alle Argumente als einzelne Strings (Nutzung: &quot;$@&quot;)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>$$            : PID (Process Id) des Bash Prozesses
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>$?            : Exit Code des letzten Kommandos
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                (typischerweise ein Wert &gt;= 0 und &lt;= 127)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>$!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
 </code></pre></div>
 <p>Die Standard errno Werte sind als C/C++ Makro Definitionen in C/C++ Include
 Dateien abgelegt und haben die folgende Form:</p>
@@ -1081,7 +1086,7 @@ Wert (2) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll
   <small>
     
       Letztes Update:
-      2022-02-16
+      2022-02-23
     
   </small>
 </div>
