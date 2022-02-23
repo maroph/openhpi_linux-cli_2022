@@ -2,6 +2,7 @@
 
 ## Bash
 
+- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 - [Bash FAQ](https://mywiki.wooledge.org/BashFAQ/)
 - [Bash scripting cheatsheet](https://devhints.io/bash)
@@ -16,6 +17,7 @@
 - [How to Change Colors on LS in Bash](https://linuxhint.com/ls_colors_bash/)
 - [How to Mount a USB Drive in Debian](https://linuxhint.com/mount_usb_drive_debian/)
 - [How to mount partition with ntfs file system and read write access](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
+- [Introduction to Linux](https://tldp.org/LDP/intro-linux/html/index.html)
 - [Jobs im Griff mit jobs, bg, fg und &](https://www.linux-community.de/ausgaben/easylinux/2009/03/jobs-im-griff-mit-jobs-bg-fg-und/)
 - [JSLinux](https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)  
   Linux im Browser (Chrome, Edge, Firefox, ...)  
@@ -31,6 +33,8 @@
 - [Reguläre Ausdrücke in der Praxis](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck#Regul%C3%A4re_Ausdr%C3%BCcke_in_der_Praxis)
 - [Rheinwerk: Linux - Das umfassende Handbuch](https://openbook.rheinwerk-verlag.de/linux/index.html)
 - [Rheinwerk: Wie werde ich UNIX-Guru?](https://openbook.rheinwerk-verlag.de/unix_guru/)
+- [Technische Praxis der Computersysteme](https://www.mat.univie.ac.at/~praxis/wisem15/vorlesung.html)
+- [The TTY demystified](http://linusakesson.net/programming/tty/index.php)
 - [Unicode Collation Algorithm](https://unicode.org/reports/tr10/)
 - [Wikipedia: Dateisystem](https://de.wikipedia.org/wiki/Dateisystem)
 - [Wikipedia: Inode](https://de.wikipedia.org/wiki/Inode)

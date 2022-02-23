@@ -11,6 +11,11 @@ $BASH_VERSION : Version der verwendeten Bash
 $0            : Dateiname des aufgerufenen Shell Skripts
 $1, ..., $9   : die ersten 9 Argumente, die an das Shell Skript
                 übergeben wurden
+$#            : Anzahl der an ein Skript übergebenen Argumente
+
+$*            : Alle Argumente als ein String (Nutzung: "$*")
+
+$@            : Alle Argumente als einzelne Strings (Nutzung: "$@")
 $$            : PID (Process Id) des Bash Prozesses
 $?            : Exit Code des letzten Kommandos
                 (typischerweise ein Wert >= 0 und <= 127)
