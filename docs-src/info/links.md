@@ -41,6 +41,7 @@
 - [Wikipedia: Unix-Dateirechte](https://de.wikipedia.org/wiki/Unix-Dateirechte)
 - [Why are hard links not allowed for directories?](https://askubuntu.com/questions/210741/why-are-hard-links-not-allowed-for-directories)
 - [Windows-Subsystem für Linux: Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
+- [WSL: Konfiguration der erweiterten Einstellungen in WSL](https://docs.microsoft.com/de-de/windows/wsl/wsl-config)
 - [WSL 2 and VPN - get the best route](https://janovesk.com/wsl/2022/01/21/wsl2-and-vpn-routing.html)
 
 ## Tools
