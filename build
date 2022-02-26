@@ -41,7 +41,7 @@ print_usage() {
     cat - <<EOT
 
 Usage: ${SCRIPT_NAME} [option(s)] [venv|deploy]
-       Call mkdocs to build the maroph.github.io related files
+       Call mkdocs to build the maroph.github.io/openhpi_linux-cli_2022 related files
 
 Options:
   -h|--help     : show this help and exit
@@ -203,10 +203,6 @@ then
     echo "${SCRIPT_NAME}: mkdocs gh-deploy"
     mkdocs gh-deploy || exit 1
     echo ""
-#
-    echo "${SCRIPT_NAME}: git status"
-    git status
-#
     exit 0
 fi
 #

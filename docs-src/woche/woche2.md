@@ -223,3 +223,13 @@ Strg + R    : suchen in History
 Kommando !! : Kommando mit dem letzten Kommando als Argument ausführen
 ```
 
+## TLDR (Too Long Didn't Read)
+Die gesamte TLDR Umgebung ist im GitHub unter der Kennung
+[tldr pages](https://github.com/tldr-pages) abgelegt. Der Standard Client ist
+ein Python Skript
+([tldr-python-client](https://github.com/tldr-pages/tldr-python-client)). Auf dieser
+Seite gibt es auch eine Beschreibung zur Konfiguration und dem Aufruf des Clients.
+Die von tldr ausgegeben Texte sind im Repository
+[tldr-pages/tldr](https://github.com/tldr-pages/tldr)
+abgelegt.
+
