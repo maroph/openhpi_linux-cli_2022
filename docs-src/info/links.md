@@ -50,12 +50,14 @@
 
 ## Tools
 
-- [awk user's guide](https://www.gnu.org/software/gawk/manual/gawk.html)
-- [ncat manpage](https://man.cx/ncat)
-- [ncat user's guide]( https://nmap.org/ncat/guide/
-- [RegEx 101](https://regex101.com/)
-- [scipt manpage](https://man.cx/script(1)/de)
-- [screen manpage](https://man.cx/screen)
-- [screen user's manual](https://www.gnu.org/software/screen/manual/)
-- [sed user's guide](https://www.gnu.org/software/sed/manual/sed.html)
+- [awk User's Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+- [ncat Manpage](https://man.cx/ncat)
+- [ncat User's Guide]( https://nmap.org/ncat/guide/
+- [RegEx 101](https://regex101.com/)  
+  Auf dieser Seite kann man interaktiv verschiedene Muster ausprobieren.
+- [script Manpage](https://man.cx/script(1)/de)  
+  Ein Tool für die Aufzeichnung aller Ein-/Ausgaben in einer Konsole.
+- [screen Manpage](https://man.cx/screen)
+- [screen User's Manual](https://www.gnu.org/software/screen/manual/)
+- [sed User's Guide](https://www.gnu.org/software/sed/manual/sed.html)
 

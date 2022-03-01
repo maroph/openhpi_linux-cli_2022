@@ -12,13 +12,12 @@ $0            : Dateiname des aufgerufenen Shell Skripts
 $1, ..., $9   : die ersten 9 Argumente, die an das Shell Skript
                 übergeben wurden
 $#            : Anzahl der an ein Skript übergebenen Argumente
-
 $*            : Alle Argumente als ein String (Nutzung: "$*")
-
 $@            : Alle Argumente als einzelne Strings (Nutzung: "$@")
 $$            : PID (Process Id) des Bash Prozesses
 $?            : Exit Code (errno) des letzten Kommandos
-                (typischerweise ein Wert >= 0 und <= 127)
+                Der Exit Code ist eine ganze Zahl. Nur der Wert 0 
+                bedeutet, das kein Fehler aufgetreten ist.
 $!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
 ```
 
@@ -35,6 +34,9 @@ Auf einem Debian System findet man diese Makro Definitionen in den Dateien
 /usr/include/asm-generic/errno-base.h
 /usr/include/asm-generic/errno.h
 ```
+
+Welche Exit Codes ein Kommando zurückgibt, ist in der Regel in der entsprechenden
+Manpage beschrieben.
 
 ## Environmentvariablen
 Shellvariablen sind nur in der aktuelle Shell bekannt. Environmentvariablen dagegen
