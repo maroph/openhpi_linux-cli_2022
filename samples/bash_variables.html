@@ -944,14 +944,13 @@ findet man hier: <a href="https://devhints.io/bash">Bash scripting cheatsheet</a
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$1, ..., $9   : die ersten 9 Argumente, die an das Shell Skript
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                übergeben wurden
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$#            : Anzahl der an ein Skript übergebenen Argumente
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>$*            : Alle Argumente als ein String (Nutzung: &quot;$*&quot;)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>$@            : Alle Argumente als einzelne Strings (Nutzung: &quot;$@&quot;)
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>$$            : PID (Process Id) des Bash Prozesses
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>$?            : Exit Code (errno) des letzten Kommandos
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                (typischerweise ein Wert &gt;= 0 und &lt;= 127)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>$!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>$*            : Alle Argumente als ein String (Nutzung: &quot;$*&quot;)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>$@            : Alle Argumente als einzelne Strings (Nutzung: &quot;$@&quot;)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>$$            : PID (Process Id) des Bash Prozesses
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>$?            : Exit Code (errno) des letzten Kommandos
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                Der Exit Code ist eine ganze Zahl. Nur der Wert 0 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                bedeutet, das kein Fehler aufgetreten ist.
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>$!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
 </code></pre></div>
 <p>Die Standard errno Werte sind als C/C++ Makro Definitionen in C/C++ Include
 Dateien abgelegt und haben die folgende Form:</p>
@@ -961,6 +960,8 @@ Dateien abgelegt und haben die folgende Form:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/usr/include/asm-generic/errno-base.h
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/usr/include/asm-generic/errno.h
 </code></pre></div>
+<p>Welche Exit Codes ein Kommando zurückgibt, ist in der Regel in der entsprechenden
+Manpage beschrieben.</p>
 <h2 id="environmentvariablen">Environmentvariablen</h2>
 <p>Shellvariablen sind nur in der aktuelle Shell bekannt. Environmentvariablen dagegen
 werden an alle Subprozesse der Shell vererbt. Ein Subprozess ist ein Prozess, der
