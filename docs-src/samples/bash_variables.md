@@ -1,4 +1,4 @@
-# Bash: Strings
+# Bash: Variablen
 Über Bash Variablen gibt es sehr viel zu sagen. Eine kurze Übericht zu diesem Thema
 findet man hier: [Bash scripting cheatsheet](https://devhints.io/bash).
 
@@ -17,7 +17,7 @@ $*            : Alle Argumente als ein String (Nutzung: "$*")
 
 $@            : Alle Argumente als einzelne Strings (Nutzung: "$@")
 $$            : PID (Process Id) des Bash Prozesses
-$?            : Exit Code des letzten Kommandos
+$?            : Exit Code (errno) des letzten Kommandos
                 (typischerweise ein Wert >= 0 und <= 127)
 $!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
 ```
