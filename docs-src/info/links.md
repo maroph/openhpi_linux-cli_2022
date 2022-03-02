@@ -51,6 +51,9 @@
 ## Tools
 
 - [awk User's Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+- [crontab guru](https://crontab.guru/)
+- [GNU Grep 3.7(https://www.gnu.org/software/grep/manual/grep.html)
+- [ grep Cheat Sheet](https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php)
 - [ncat Manpage](https://man.cx/ncat)
 - [ncat User's Guide]( https://nmap.org/ncat/guide/
 - [RegEx 101](https://regex101.com/)  

@@ -19,6 +19,8 @@ $?            : Exit Code (errno) des letzten Kommandos
                 Der Exit Code ist eine ganze Zahl. Nur der Wert 0 
                 bedeutet, das kein Fehler aufgetreten ist.
 $!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
+$RANDOM       : erzeugt bei jedem Zugriff eine neue pseudorandom Ganzzahl
+                im Bereich 0-32767
 ```
 
 Die Standard errno Werte sind als C/C++ Makro Definitionen in C/C++ Include
