@@ -9,6 +9,7 @@
 - [Pure Bash Bible](https://github.com/tcauduro/pure-bash-bible)
 - [Rheinwerk Linux](https://openbook.rheinwerk-verlag.de/linux/linux_kap11_001.html)
 - [SelfLinux](https://www.selflinux.org/selflinux/html/shellprogrammierung.html)
+- [Wie man Funktionen in Bash verwendet](https://www.delftstack.com/de/howto/linux/how-to-use-functions-in-bash/)
 
 ## Linux:
 
@@ -51,8 +52,11 @@
 ## Tools
 
 - [awk User's Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+- [Crontab: A Beginners Guide To Cron Jobs](https://ostechnix.com/a-beginners-guide-to-cron-jobs/)
+- [Cron Ubuntu Wiki](https://wiki.ubuntuusers.de/Cron/)
 - [crontab guru](https://crontab.guru/)
-- [GNU Grep 3.7(https://www.gnu.org/software/grep/manual/grep.html)
+- [Crontab Syntax und Tutorial](https://www.stetic.com/developer/cronjob-linux-tutorial-und-crontab-syntax/)
+- [GNU Grep 3.7](https://www.gnu.org/software/grep/manual/grep.html)
 - [ grep Cheat Sheet](https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php)
 - [ncat Manpage](https://man.cx/ncat)
 - [ncat User's Guide]( https://nmap.org/ncat/guide/
