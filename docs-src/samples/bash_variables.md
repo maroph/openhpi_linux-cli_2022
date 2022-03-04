@@ -16,10 +16,10 @@ $*            : Alle Argumente als ein String (Nutzung: "$*")
 $@            : Alle Argumente als einzelne Strings (Nutzung: "$@")
 $$            : PID (Process Id) des Bash Prozesses
 $?            : Exit Code (errno) des letzten Kommandos
-                Der Exit Code ist eine ganze Zahl. Nur der Wert 0 
-                bedeutet, das kein Fehler aufgetreten ist.
+                Der Exit Code ist eine ganze Zahl im Bereich 0-255.
+                Nur der Wert 0 bedeutet, das kein Fehler aufgetreten ist.
 $!            : PID des zuletzt in der Bash gestarten Hintergrundprozesses
-$RANDOM       : erzeugt bei jedem Zugriff eine neue pseudorandom Ganzzahl
+$RANDOM       : erzeugt bei jedem Zugriff eine neue pseudorandom Zahl
                 im Bereich 0-32767
 ```
 

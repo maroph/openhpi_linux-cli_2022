@@ -32,6 +32,7 @@ nav:
         - samples/index.md
         - Bash Arrays: samples/bash_arrays.md
         - Bash Assoziative Arrays: samples/bash_assoziative_arrays.md
+        - Bash Funktionen: samples/bash_functions.md
         - Bash Variablen: samples/bash_variables.md
         - date Kommando: samples/date_samples.md
         - Verschiedenes: samples/misc.md
