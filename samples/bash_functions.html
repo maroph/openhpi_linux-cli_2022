@@ -12,14 +12,14 @@
         <meta name="author" content="Manfred Rosenboom (maroph)">
       
       
-        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/info/license.html">
+        <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/bash_functions.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
-        <title>Lizenz - openHPI Linux CLI</title>
+        <title>Bash Funktionen - openHPI Linux CLI</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lizenz" class="md-skip">
+        <a href="#bash-funktionen" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lizenz
+              Bash Funktionen
             
           </span>
         </div>
@@ -188,13 +188,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../samples/index.html" class="md-tabs__link">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
         Beispiele
       </a>
     </li>
@@ -204,15 +206,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="about.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../info/about.html" class="md-tabs__link">
         Info
       </a>
     </li>
@@ -370,12 +370,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -401,7 +403,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../samples/index.html">Beispiele</a>
+          <a href="index.html">Beispiele</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -424,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/bash_arrays.html" class="md-nav__link">
+      <a href="bash_arrays.html" class="md-nav__link">
         Bash Arrays
       </a>
     </li>
@@ -438,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/bash_assoziative_arrays.html" class="md-nav__link">
+      <a href="bash_assoziative_arrays.html" class="md-nav__link">
         Bash Assoziative Arrays
       </a>
     </li>
@@ -450,11 +452,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../samples/bash_functions.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bash Funktionen
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="bash_functions.html" class="md-nav__link md-nav__link--active">
         Bash Funktionen
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funktionsdeklaration" class="md-nav__link">
+    Funktionsdeklaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funktionsdeklaration-und-aufruf" class="md-nav__link">
+    Funktionsdeklaration und Aufruf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubergabeparameter" class="md-nav__link">
+    Übergabeparameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globalelokale-variablen" class="md-nav__link">
+    Globale/Lokale Variablen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ruckgabewert" class="md-nav__link">
+    Rückgabewert
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -466,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/bash_variables.html" class="md-nav__link">
+      <a href="bash_variables.html" class="md-nav__link">
         Bash Variablen
       </a>
     </li>
@@ -480,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/date_samples.html" class="md-nav__link">
+      <a href="date_samples.html" class="md-nav__link">
         date Kommando
       </a>
     </li>
@@ -494,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/misc.html" class="md-nav__link">
+      <a href="misc.html" class="md-nav__link">
         Verschiedenes
       </a>
     </li>
@@ -514,14 +585,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -554,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about.html" class="md-nav__link">
+      <a href="../info/about.html" class="md-nav__link">
         Über
       </a>
     </li>
@@ -566,21 +635,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="license.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../info/license.html" class="md-nav__link">
         Lizenz
       </a>
-      
     </li>
   
 
@@ -592,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sources.html" class="md-nav__link">
+      <a href="../info/sources.html" class="md-nav__link">
         Quellen
       </a>
     </li>
@@ -606,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="links.html" class="md-nav__link">
+      <a href="../info/links.html" class="md-nav__link">
         Links
       </a>
     </li>
@@ -640,6 +699,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funktionsdeklaration" class="md-nav__link">
+    Funktionsdeklaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funktionsdeklaration-und-aufruf" class="md-nav__link">
+    Funktionsdeklaration und Aufruf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubergabeparameter" class="md-nav__link">
+    Übergabeparameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globalelokale-variablen" class="md-nav__link">
+    Globale/Lokale Variablen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ruckgabewert" class="md-nav__link">
+    Rückgabewert
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -650,25 +752,139 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/info/license.md" title="Seite editieren" class="md-content__button md-icon">
+<a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/bash_functions.md" title="Seite editieren" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="lizenz">Lizenz</h1>
-<p><img alt="CC-BY 4.0" src="../assets/cc-by_88x31.png" /><br />
-Die Daten auf dieser Site sind lizenziert unter einer
-<a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.</p>
-<p>tl;dr:<a href="https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)">CC-BY 4.0</a>.</p>
+<h1 id="bash-funktionen">Bash: Funktionen</h1>
+<p>Werden Blöcke von Statements in einem Skript an mehreren Stellen verwendet, ist
+praktisch, diese Blöcke an einer Stelle im Skript zu hinterlegen und dann überall
+dort, wo diese Blöcke genutzt werden, auf diese Stelle zu verweisen.</p>
+<p>In der Bash sind das Funktionen, die man deklariert. Diese Funktionen können dann
+innerhalb eines Skripts aufgerufen werden.</p>
+<h2 id="funktionsdeklaration">Funktionsdeklaration</h2>
+<p>Funktionen können auf zwei Arten deklariert werden.</p>
+<p>Variante 1  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">function</span> function_name<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    statement1
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ...
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    statementN
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="o">}</span>
+</code></pre></div>
+<p>Variante 2  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>function_name<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    statement1
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    ...
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    statementN
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">}</span>
+</code></pre></div>
+<h2 id="funktionsdeklaration-und-aufruf">Funktionsdeklaration und Aufruf</h2>
+<p>Hier ein einfaches Besipiel in beiden Varianten</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">function</span> hallo1<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">echo</span> <span class="s2">&quot;Hallo1!&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>hallo1
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hallo2<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="nb">echo</span> <span class="s2">&quot;Hallo2!&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">}</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>hallo2
+</code></pre></div>
+<p>Der Aufruf einer Funktion sieht genauso aus wie der Aufruf eines
+Kommandos/Programms.</p>
+<h2 id="ubergabeparameter">Übergabeparameter</h2>
+<p>Parameter werden genau wie bei Kommandos übergeben. Im Scope der Funktion kann
+man für den Zugriff auf die Parameter die Shell Variable $1, ,,, $9, $#, $*, $@</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">function</span> zeigeUebergabeParameter<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="nb">echo</span> <span class="s2">&quot;Anzahl Parameter : </span><span class="nv">$#</span><span class="s2">&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;Parameter 1      : </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;Parameter 2      : </span><span class="nv">$2</span><span class="s2">&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="nb">echo</span> <span class="s2">&quot;Alle Parameter:&quot;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>zeigeUebergabeParameter p1 p2 p3 p4
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Anzahl Parameter : 4
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Parameter 1      : p1
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Parameter 2      : p2
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Alle Parameter:
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>p1 p2 p3 p4
+</code></pre></div>
+<h2 id="globalelokale-variablen">Globale/Lokale Variablen</h2>
+<p>Variablen, die außerhalb einer Funktion deklariert wurden (globale Variablen),
+können auch innerhalb einer Funktion genutzt und geändert werden.</p>
+<p>Wird eine Variable in einer Funktion deklariert, ist sie nach dem Aufruf der Funktion
+auf außerhald der Funktion deklariert und ist damit auch eine globale Variable.</p>
+<p>Den Gültigkeitsbereich einer Variablen kann man auf eine Funktion beschränken, wenn
+man sie in der Funktion vor einer Variablendeklaration das Schlüsselwort <em>local</em>
+setzt.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">var1</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">var2</span><span class="o">=</span><span class="m">2</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">#</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>use_of_variables<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="nb">local</span> <span class="nv">var1</span><span class="o">=</span><span class="m">10</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="nv">var2</span><span class="o">=</span><span class="m">7</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="nv">var3</span><span class="o">=</span><span class="m">42</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="nb">local</span> <span class="nv">var4</span><span class="o">=</span><span class="m">2525</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="nb">echo</span> <span class="s2">&quot;In der Funktion: var1: </span><span class="nv">$var1</span><span class="s2">, var2: </span><span class="nv">$var2</span><span class="s2">, var3: </span><span class="nv">$var3</span><span class="s2">, var4: </span><span class="nv">$var4</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="o">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1">#</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nb">echo</span> <span class="s2">&quot;Vor dem Aufruf der Funktion: var1: </span><span class="nv">$var1</span><span class="s2">, var2: </span><span class="nv">$var2</span><span class="s2">, var3: </span><span class="nv">$var3</span><span class="s2">, var4: </span><span class="nv">$var4</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>use_of_variables
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="nb">echo</span> <span class="s2">&quot;Nach dem Aufruf der Funktion: var1: </span><span class="nv">$var1</span><span class="s2">, var2: </span><span class="nv">$var2</span><span class="s2">, var3: </span><span class="nv">$var3</span><span class="s2">, var4: </span><span class="nv">$var4</span><span class="s2">&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Vor dem Aufruf der Funktion: var1: 1, var2: 2, var3: , var4:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>In der Funktion: var1: 10, var2: 7, var3: 42, var4: 2525
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Nach dem Aufruf der Funktion: var1: 1, var2: 7, var3: 42, var4:
+</code></pre></div>
+<h2 id="ruckgabewert">Rückgabewert</h2>
+<p>Der Rückgabewert einer Bash Funktion ist der Exit Code des letzten ausgeführten
+Statements.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">FULL_SCRIPT_NAME</span><span class="o">=</span><span class="nv">$0</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">#</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">function</span> file_size<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    stat --format <span class="s2">&quot;%n: %s Bytes&quot;</span> <span class="nv">$1</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="o">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>file_size <span class="si">${</span><span class="nv">FULL_SCRIPT_NAME</span><span class="si">}</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">echo</span> <span class="s2">&quot;exit code : </span><span class="nv">$?</span><span class="s2">&quot;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>file_size diese_datei_gibt_es_nicht
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="nb">echo</span> <span class="s2">&quot;exit code : </span><span class="nv">$?</span><span class="s2">&quot;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+</code></pre></div>
+<p>Der obige Coder erzeugt die folgende Ausgabe:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./bash_functions.bash: 3314 Bytes
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>exit code : 0
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>stat: cannot statx &#39;diese_datei_gibt_es_nicht&#39;: No such file or directory
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>exit code : 1
+</code></pre></div>
+<p>Mit dem Schlüsselwort <em>return</em> kann man eine Funktion jederzeit beenden und einen 
+Exit Code setzen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">FULL_SCRIPT_NAME</span><span class="o">=</span><span class="nv">$0</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1">#</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">function</span> file_size_return<span class="o">()</span> <span class="o">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">return</span> <span class="m">42</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    stat --format <span class="s2">&quot;%n: %s Bytes&quot;</span> <span class="nv">$1</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">}</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>file_size_return <span class="si">${</span><span class="nv">FULL_SCRIPT_NAME</span><span class="si">}</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nb">echo</span> <span class="s2">&quot;exit code : </span><span class="nv">$?</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Ausgabe:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>exit code : 42
+</code></pre></div>
 <hr />
+<p>Ein Skript, dass alle hier gezeigten Beispiele ausführt, findet man hier:
+<a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/bash_functions.bash">bash_functions.bash</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Letztes Update:
-      2022-02-12
+      2022-03-04
     
   </small>
 </div>
@@ -685,7 +901,7 @@ Die Daten auf dieser Site sind lizenziert unter einer
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="about.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Über" rel="prev">
+        <a href="bash_assoziative_arrays.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Bash Assoziative Arrays" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -694,20 +910,20 @@ Die Daten auf dieser Site sind lizenziert unter einer
               <span class="md-footer__direction">
                 Zurück
               </span>
-              Über
+              Bash Assoziative Arrays
             </div>
           </div>
         </a>
       
       
         
-        <a href="sources.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Quellen" rel="next">
+        <a href="bash_variables.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Bash Variablen" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Weiter
               </span>
-              Quellen
+              Bash Variablen
             </div>
           </div>
           <div class="md-footer__button md-icon">
