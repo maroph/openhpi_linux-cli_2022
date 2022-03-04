@@ -59,7 +59,7 @@
 - [GNU Grep 3.7](https://www.gnu.org/software/grep/manual/grep.html)
 - [ grep Cheat Sheet](https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php)
 - [ncat Manpage](https://man.cx/ncat)
-- [ncat User's Guide]( https://nmap.org/ncat/guide/
+- [ncat User's Guide]( https://nmap.org/ncat/guide/)
 - [RegEx 101](https://regex101.com/)  
   Auf dieser Seite kann man interaktiv verschiedene Muster ausprobieren.
 - [script Manpage](https://man.cx/script(1)/de)  
