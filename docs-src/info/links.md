@@ -16,6 +16,8 @@
 - [Debian 10 Administrationshandbuch](https://debian-handbook.info/browse/de-DE/stable/index.html)
 - [Debian mount commando](https://manpages.debian.org/bullseye/mount/mount.8.en.html)
 - [Debian Paketsuche](https://packages.debian.org/index)
+- [Flatpak](https://flatpak.org/)
+- [Flathub](https://flathub.org/)
 - [How to Change Colors on LS in Bash](https://linuxhint.com/ls_colors_bash/)
 - [How to Mount a USB Drive in Debian](https://linuxhint.com/mount_usb_drive_debian/)
 - [How to mount partition with ntfs file system and read write access](https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access)
@@ -26,8 +28,10 @@
   Alpine Linux 3.12 mit einem Kernel 4.12
 - [Linux Manpages: die.net](https://linux.die.net/man/)
 - [Linux Manpages:man.cx](https://man.cx/)
-- [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)
-- [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)
+- [LPIC: Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-de.pdf)  
+  Linux Einführungskurs
+- [LPIC: LPIC-1](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-de.pdf)  
+  Eine Vertiefung des LPIC-1 Kurses
 - [Rechte im Dateisystem](https://www.informatik-aktuell.de/betrieb/betriebssysteme/rechte-im-dateisystem-mehr-als-nur-rwx.html)
 - [RegexLearn](https://regexlearn.com/)
 - [ Regular-Expressions.info](https://www.regular-expressions.info/)
@@ -37,7 +41,9 @@
 - [Rheinwerk: Wie werde ich UNIX-Guru?](https://openbook.rheinwerk-verlag.de/unix_guru/)
 - [snap](https://wiki.ubuntuusers.de/snap/)
 - [snapcraft.io](https://snapcraft.io/)
-- [Technische Praxis der Computersysteme](https://www.mat.univie.ac.at/~praxis/wisem15/vorlesung.html)
+- [Technische Praxis der Computersysteme](https://www.mat.univie.ac.at/~praxis/wisem15/vorlesung.html)  
+  Vorlesung im Wintersemester 2015 an der Universität Wien.  
+  Diese Vorlesung bietet eine gute Einführung in Linux.
 - [The TTY demystified](http://linusakesson.net/programming/tty/index.php)
 - [Unicode Collation Algorithm](https://unicode.org/reports/tr10/)
 - [Using 'apt search' and 'apt show'](https://itsfoss.com/apt-search-command/)
