@@ -3,6 +3,7 @@
 ## Bash
 
 - [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
+- [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 - [Bash FAQ](https://mywiki.wooledge.org/BashFAQ/)
 - [Bash scripting cheatsheet](https://devhints.io/bash)
