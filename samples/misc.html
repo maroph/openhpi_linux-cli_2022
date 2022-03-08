@@ -537,6 +537,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bash-script-template" class="md-nav__link">
+    Bash Script Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#passwort-prufen" class="md-nav__link">
     Passwort prüfen
   </a>
@@ -712,6 +719,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bash-script-template" class="md-nav__link">
+    Bash Script Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#passwort-prufen" class="md-nav__link">
     Passwort prüfen
   </a>
@@ -772,6 +786,42 @@ Schleife:</p>
 <p>Ablauf: so lange die Variable count kleiner als die Variable maxcount ist, wird die 
 Schleife durchlaufen. Am Ende der Schleife wird der Wert der Variablen count um 1
 vergrößert.</p>
+<h2 id="bash-script-template">Bash Script Template</h2>
+<p>Die Datei <a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/template.bash">template.bash</a>
+enthält einen einfachen Rahmen zur Erstellung von Bash Skripten mit Optionen und
+Argumenten.</p>
+<p><strong>Variablen</strong></p>
+<ul>
+<li>SCRIPT_NAME<br />
+  Diese Variable enthält den Namen des Skripts</li>
+<li>SCRIPT_DIR<br />
+  Diese Variable enthält den vollen Pfadnamen des Verzeichnisses, in dem das
+  Skript abgelegt ist.</li>
+<li>VERSION<br />
+  Diese Variable enthält eine Versionsinformation zum Skript.</li>
+</ul>
+<p><strong>Weiter Variablen</strong> 
+Diese Variaben sind nur Beispiele, die zeigen sollen, wie man Variablen über
+Optionen setzen kann.</p>
+<ul>
+<li>number<br />
+  Ein Beispiel für eine numerische Variable</li>
+<li>string<br />
+  Ein Beispiel für eine String Variable</li>
+</ul>
+<p><strong>Optionen</strong></p>
+<div class="highlight"><pre><span></span><code>-h oder --help     : Ausgabe der Hilfeinformation und beenden des Skripts
+-V oder --version  : Ausgabe der Version und beenden des Skripts
+-n oder --number   : setzen der Variablen number
+-s oder --string   : setzen der Variablen string
+--                 : es wird nicht weiter auf Optionen geprüft
+                     sinnvoll, wenn das erste Argument mit - oder --
+                     beginnt.
+</code></pre></div>
+<p><strong>Argumente</strong><br />
+Das Skript erwartet ein Argument. Der Wert wird in der Variablen arg1 abgelegt.</p>
+<p><strong> Funktion print_usage</strong><br />
+Gibt den Hilfetext aus</p>
 <h2 id="passwort-prufen">Passwort prüfen</h2>
 <p>Basierend auf dem heise Artikel
 <a href="https://www.heise.de/security/artikel/Nach-dem-Passwort-Leak-Eigene-Passwoerter-lokal-checken-4284756.html">Nach dem Passwort-Leak: Eigene Passwörter lokal checken</a>
@@ -876,7 +926,7 @@ Treffer, wird die Trefferanzahl mit einem sed Aufruf aus der Zeile herausgeholt.
   <small>
     
       Letztes Update:
-      2022-02-19
+      2022-03-08
     
   </small>
 </div>
