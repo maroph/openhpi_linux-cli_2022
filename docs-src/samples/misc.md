@@ -19,6 +19,46 @@ Ablauf: so lange die Variable count kleiner als die Variable maxcount ist, wird 
 Schleife durchlaufen. Am Ende der Schleife wird der Wert der Variablen count um 1
 vergrößert.
 
+## Bash Script Template                                    #
+Die Datei [template.bash](https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/template.bash)
+enthält einen einfachen Rahmen zur Erstellung von Bash Skripten mit Optionen und
+Argumenten.
+
+**Variablen**
+
+* SCRIPT_NAME  
+  Diese Variable enthält den Namen des Skripts
+* SCRIPT_DIR  
+  Diese Variable enthält den vollen Pfadnamen des Verzeichnisses, in dem das
+  Skript abgelegt ist.
+* VERSION  
+  Diese Variable enthält eine Versionsinformation zum Skript.
+
+**Weiter Variablen** 
+Diese Variaben sind nur Beispiele, die zeigen sollen, wie man Variablen über
+Optionen setzen kann.
+
+* number  
+  Ein Beispiel für eine numerische Variable
+* string  
+  Ein Beispiel für eine String Variable
+
+**Optionen**
+
+    -h oder --help     : Ausgabe der Hilfeinformation und beenden des Skripts
+    -V oder --version  : Ausgabe der Version und beenden des Skripts
+    -n oder --number   : setzen der Variablen number
+    -s oder --string   : setzen der Variablen string
+    --                 : es wird nicht weiter auf Optionen geprüft
+                         sinnvoll, wenn das erste Argument mit - oder --
+                         beginnt.
+
+**Argumente**  
+Das Skript erwartet ein Argument. Der Wert wird in der Variablen arg1 abgelegt.
+
+** Funktion print_usage**  
+Gibt den Hilfetext aus
+
 ## Passwort prüfen
 Basierend auf dem heise Artikel
 [Nach dem Passwort-Leak: Eigene Passwörter lokal checken](https://www.heise.de/security/artikel/Nach-dem-Passwort-Leak-Eigene-Passwoerter-lokal-checken-4284756.html)
