@@ -73,5 +73,6 @@
   Ein Tool für die Aufzeichnung aller Ein-/Ausgaben in einer Konsole.
 - [screen Manpage](https://man.cx/screen)
 - [screen User's Manual](https://www.gnu.org/software/screen/manual/)
+- [sed: Nützliche, einzeilige Scripts](http://sed.sourceforge.net/sed1line_de.html)
 - [sed User's Guide](https://www.gnu.org/software/sed/manual/sed.html)
 
