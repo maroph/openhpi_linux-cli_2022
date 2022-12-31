@@ -3,7 +3,10 @@
 ## Bash
 
 - [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
+- [Bash Builtins](https://linuxcommand.org/lc3_man_page_index.php#builtins)
 - [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
+- [Bash Hackers Wiki](https://wiki.bash-hackers.org/start)
+- [Bash Prompt HOWTO](https://tldp.org/HOWTO/Bash-Prompt-HOWTO/index.html)
 - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 - [Bash FAQ](https://mywiki.wooledge.org/BashFAQ/)
 - [Bash scripting cheatsheet](https://devhints.io/bash)
@@ -45,6 +48,7 @@
 - [Technische Praxis der Computersysteme](https://www.mat.univie.ac.at/~praxis/wisem15/vorlesung.html)  
   Vorlesung im Wintersemester 2015 an der Universität Wien.  
   Diese Vorlesung bietet eine gute Einführung in Linux.
+- [The Linux Command Line](https://linuxcommand.org/tlcl.php)
 - [The TTY demystified](http://linusakesson.net/programming/tty/index.php)
 - [Unicode Collation Algorithm](https://unicode.org/reports/tr10/)
 - [Using 'apt search' and 'apt show'](https://itsfoss.com/apt-search-command/)
