@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/bash_arrays.html">
       
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="bash_assoziative_arrays.html">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -124,6 +129,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -951,19 +958,18 @@
                 
                   
 
-  <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/bash_arrays.md" title="Seite editieren" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="bash-arrays">Bash: Arrays</h1>
 <h2 id="anlegen-eines-arrays">Anlegen eines Arrays</h2>
 <h3 id="anlegen-eines-leeren-arrays">Anlegen eines leeren Arrays</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">declare</span> -a array
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span>array
 </code></pre></div>
 <h3 id="anlegen-eines-vorbelegten-arrays">Anlegen eines vorbelegten Arrays</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">declare</span> -a <span class="nv">arrayPre</span><span class="o">=(</span>wert1 wert2 wert3 wert4<span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">arrayPre</span><span class="o">=(</span>wert1<span class="w"> </span>wert2<span class="w"> </span>wert3<span class="w"> </span>wert4<span class="o">)</span>
 </code></pre></div>
 <h2 id="werte-an-ein-array-anhangen">Werte an ein Array anhängen</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">array</span><span class="o">+=(</span><span class="s2">&quot;wert1&quot;</span><span class="o">)</span>
@@ -973,65 +979,65 @@
 </code></pre></div>
 <h2 id="zugriff-auf-ein-element-mit-index">Zugriff auf ein Element mit Index</h2>
 <p>Das erste Element in einem Bash Array hat den Index 0.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[1]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[1]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="einer-wert-mit-index-setzen">Einer Wert mit Index setzen</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>array<span class="o">[</span><span class="m">1</span><span class="o">]=</span><span class="s2">&quot;wert2_neu&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[1]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[1]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>array<span class="o">[</span><span class="m">5</span><span class="o">]=</span><span class="s2">&quot;wert5&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[5]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[5]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 Was ist der Wert vom Element mit dem nicht belegtem Index 4 ?</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[4]</span><span class="si">}</span><span class="s2">&quot;</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[4]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 Da dem Array mit dem Index 4 noch kein Wert zugewiesen wurde, wird der Ausdruck
 <em>${array[4]}</em> zu einem Leerstring expandiert</p>
 <h2 id="lange-eines-arrays">Länge eines Arrays</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span> <span class="s2">&quot;Länge des Arrays array    : </span><span class="si">${#</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">echo</span> <span class="s2">&quot;Länge des Arrays arrayPre : </span><span class="si">${#</span><span class="nv">arrayPre</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Länge des Arrays array    : </span><span class="si">${#</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Länge des Arrays arrayPre : </span><span class="si">${#</span><span class="nv">arrayPre</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="array-kopieren">Array kopieren</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">array2</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
 </code></pre></div>
 <h2 id="array-konkatenieren">Array konkatenieren</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">array3</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array2</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">array3</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array2</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
 </code></pre></div>
 <h2 id="teilbereich-vonbis-eines-arrays-ausgeben">Teilbereich (von/bis) eines Arrays ausgeben</h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]:</span><span class="nv">1</span><span class="p">:</span><span class="nv">4</span><span class="si">}</span><span class="s2">&quot;</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]:</span><span class="nv">1</span><span class="p">:</span><span class="nv">4</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 Es werden die Werte mit dem Index 1-3 ausgegeben.
 Der erste Wert (1) gibt an, ab welchem Index die Ausgabe bebinnt und der zweite
 Wert (4) gibt den ersten Index an, dessen Wert nicht mehr ausgegeben werden soll.</p>
 <h2 id="ausgabe-des-gesamten-arrays">Ausgabe des gesamten Arrays</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="werte-bei-der-ausgabe-ersetzen">Werte bei der Ausgabe ersetzen</h2>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]/wert/value</span><span class="si">}</span><span class="s2">&quot;</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]/wert/value</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 Dieser Ausdruck gibt alle Werte des Array aus. Dabei wird der String "wert" durch den
 String "value" ersetzt.</p>
 <h2 id="iteration-uber-ein-array">Iteration über ein Array</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">for</span> wert <span class="k">in</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">for</span><span class="w"> </span>wert<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">do</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;Wert : </span><span class="si">${</span><span class="nv">wert</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Wert : </span><span class="si">${</span><span class="nv">wert</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">done</span>
 </code></pre></div>
 <h2 id="prufen-ob-ein-wert-im-array-enthalten-ist">Prüfen, ob ein Wert im Array enthalten ist</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot; </span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> &quot;</span> <span class="o">=</span>~ <span class="s2">&quot; wert1 &quot;</span> <span class="o">]]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot; </span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> &quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="s2">&quot; wert1 &quot;</span><span class="w"> </span><span class="o">]]</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">then</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;der Wert wert1 ist im Array array enthalten&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;der Wert wert1 ist im Array array enthalten&quot;</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">fi</span>
 </code></pre></div>
 <h2 id="prufen-ob-ein-wert-nicht-im-array-enthalten-ist">Prüfen, ob ein Wert nicht im Array enthalten ist</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">if</span> <span class="o">[[</span> ! <span class="s2">&quot; </span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> &quot;</span> <span class="o">=</span>~ <span class="s2">&quot; wertNONE &quot;</span> <span class="o">]]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="s2">&quot; </span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2"> &quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="s2">&quot; wertNONE &quot;</span><span class="w"> </span><span class="o">]]</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">then</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;der Wert wertNone ist im Array array NICHT enthalten&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;der Wert wertNone ist im Array array NICHT enthalten&quot;</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">fi</span>
 </code></pre></div>
 <h2 id="loschen-eines-elementes-aus-einem-array">Löschen eines Elementes aus einem Array</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">unset</span> array<span class="o">[</span><span class="m">5</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">unset</span><span class="w"> </span>array<span class="o">[</span><span class="m">5</span><span class="o">]</span>
 </code></pre></div>
 <h2 id="loschen-eines-arrays">Löschen eines Arrays</h2>
 <p>unset array</p>
@@ -1039,11 +1045,11 @@ String "value" ersetzt.</p>
 <p>Diesen Code habe ich in der
 <a href="https://mywiki.wooledge.org/BashFAQ/005">BashFAQ/005</a>
 im Kapitel "2.1. Loading lines from a file or stream" gefunden.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>mapfile -t array &lt; ./tmp.txt
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">echo</span> <span class="s2">&quot;Anzahl gelesener Zeilen: \${#array[@]}: </span><span class="si">${#</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">for</span> line <span class="k">in</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>mapfile<span class="w"> </span>-t<span class="w"> </span>array<span class="w"> </span>&lt;<span class="w"> </span>./tmp.txt
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Anzahl gelesener Zeilen: \${#array[@]}: </span><span class="si">${#</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">for</span><span class="w"> </span>line<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">do</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="nb">echo</span> <span class="s2">&quot;&gt;&gt;&gt;&gt;&gt; </span><span class="si">${</span><span class="nv">line</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt; </span><span class="si">${</span><span class="nv">line</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="k">done</span>
 </code></pre></div>
 <hr />
@@ -1075,48 +1081,12 @@ im Kapitel "2.1. Loading lines from a file or stream" gefunden.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
-      
-        
-        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Beispiele" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Zurück
-              </span>
-              Beispiele
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="bash_assoziative_arrays.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Bash Assoziative Arrays" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Weiter
-              </span>
-              Bash Assoziative Arrays
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright (c) 2022 <a href="https://github.com/maroph">Manfred Rosenboom</a>
+      Copyright (c) 2022-2023 <a href="https://github.com/maroph">Manfred Rosenboom</a>
     </div>
   
   
@@ -1136,12 +1106,11 @@ im Kapitel "2.1. Loading lines from a file or stream" gefunden.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>

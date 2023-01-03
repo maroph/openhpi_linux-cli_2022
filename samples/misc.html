@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/misc.html">
       
+      
+        <link rel="prev" href="date_samples.html">
+      
+      
+        <link rel="next" href="../info/about.html">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -124,6 +129,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -769,10 +776,9 @@
                 
                   
 
-  <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/misc.md" title="Seite editieren" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="verschiedenes">Verschiedenes</h1>
@@ -782,10 +788,10 @@ ist ein kleines Skript zur Entspannung. Wesentlicher Teil des Skripts ist eine
 Schleife:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">count</span><span class="o">=</span><span class="m">0</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">maxcount</span><span class="o">=</span><span class="m">10</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">while</span> <span class="o">[</span> <span class="si">${</span><span class="nv">count</span><span class="si">}</span> -lt <span class="si">${</span><span class="nv">maxcount</span><span class="si">}</span> <span class="o">]</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="si">${</span><span class="nv">count</span><span class="si">}</span><span class="w"> </span>-lt<span class="w"> </span><span class="si">${</span><span class="nv">maxcount</span><span class="si">}</span><span class="w"> </span><span class="o">]</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">do</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ...
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="nv">count</span><span class="o">=</span><span class="k">$((</span>count <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>...
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nv">count</span><span class="o">=</span><span class="k">$((</span>count<span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">done</span>
 </code></pre></div>
 <p>Ablauf: so lange die Variable count kleiner als die Variable maxcount ist, wird die 
@@ -842,36 +848,36 @@ auch an die Site übertragen.</p>
 ist im heise Artikel beschrieben. Im folgenden Beispiel wird das Passwort 
 123456 benutzt.</p>
 <p>Zuerst bildet man den SHA1 (Secure Hash Algorithm 1) Wert des Pasworts:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ <span class="nb">echo</span> -n <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> sha1sum
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>7c4a8d09ca3762af61e59520943dc26494f8941b  -
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>7c4a8d09ca3762af61e59520943dc26494f8941b<span class="w">  </span>-
 </code></pre></div>
 Warum wird echo mit -n aufgerufen?</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span> <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> sha1sum
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>c4f9375f9834b4e7f0a528cc65c055702bf5f24a  -
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>c4f9375f9834b4e7f0a528cc65c055702bf5f24a<span class="w">  </span>-
 </code></pre></div>
 <p>D.h.: man erhält einen anderen Hashwert.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ <span class="nb">echo</span> -n <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> xxd
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">00000000</span>: <span class="m">3132</span> <span class="m">3334</span> <span class="m">3536</span>                           <span class="m">123456</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$ <span class="nb">echo</span> <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> xxd
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">00000000</span>: <span class="m">3132</span> <span class="m">3334</span> <span class="m">3536</span> 0a                        <span class="m">123456</span>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xxd
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">00000000</span>:<span class="w"> </span><span class="m">3132</span><span class="w"> </span><span class="m">3334</span><span class="w"> </span><span class="m">3536</span><span class="w">                           </span><span class="m">123456</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xxd
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">00000000</span>:<span class="w"> </span><span class="m">3132</span><span class="w"> </span><span class="m">3334</span><span class="w"> </span><span class="m">3536</span><span class="w"> </span>0a<span class="w">                        </span><span class="m">123456</span>.
 </code></pre></div>
 <p>Der Aufruf <em>echo</em> hängt an das Ende der Zeichenkette noch das Steuerzeichen 0x0a an,
 das für einen Zeilenvorschub sorgt. Da aber nur die Zeichenkette selbst gehasht 
 werden soll, muss man <em>echo</em> mit der Option <em>-n</em> aufrufen.</p>
 <p>Am Ende der Ausgabe des Hashwerts steht nach dem Hashwert noch " -". Diesen Teil
 kann man folgendermaßen entfernen:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ <span class="nb">echo</span> -n <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> sha1sum <span class="p">|</span> awk <span class="s1">&#39;{ print $1; }&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $1; }&#39;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>7c4a8d09ca3762af61e59520943dc26494f8941b
 </code></pre></div>
 <p>Das awk Kommando bewirkt, dass von jeder gelesen Zeile (hier nur eine Zeile) das 
 erste Wort ausgegeben wird.</p>
 <p>Soweit so gut, aber: der Suchstring für die Abfrage muss Großuchstaben statt 
 Kleinbuchstaben enthalten.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ <span class="nb">echo</span> -n <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> sha1sum <span class="p">|</span> awk <span class="s1">&#39;{ print $1; }&#39;</span> <span class="p">|</span> tr <span class="s1">&#39;[a-z]&#39;</span> <span class="s1">&#39;[A-Z]&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $1; }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;[a-z]&#39;</span><span class="w"> </span><span class="s1">&#39;[A-Z]&#39;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>7C4A8D09CA3762AF61E59520943DC26494F8941B
 </code></pre></div>
 <p>Man kann hier auch das folgende verwenden:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ <span class="nb">echo</span> -n <span class="s2">&quot;123456&quot;</span> <span class="p">|</span> sha1sum <span class="p">|</span> awk <span class="s1">&#39;{ print $1; }&#39;</span> <span class="p">|</span> tr <span class="s1">&#39;[:lower:]&#39;</span> <span class="s1">&#39;[:upper:]&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;123456&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $1; }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;[:lower:]&#39;</span><span class="w"> </span><span class="s1">&#39;[:upper:]&#39;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>7C4A8D09CA3762AF61E59520943DC26494F8941B
 </code></pre></div>
 <p>Für die Suche werden nur die ersten 5 Zeichen ("7C4A8") gesendet. Dazu ruft man
@@ -886,7 +892,7 @@ Format:</p>
 </code></pre></div>
 <p>Die benötigten Wert kann man sich in der Bash folgendermaßen in Variablen
 speichern:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">hash</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> -n <span class="si">${</span><span class="nv">password</span><span class="si">}</span> <span class="p">|</span> sha1sum <span class="p">|</span> awk <span class="s1">&#39;{ print $1; }&#39;</span> <span class="p">|</span> tr <span class="s1">&#39;[a-z]&#39;</span> <span class="s1">&#39;[A-Z]&#39;</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">hash</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">password</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $1; }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;[a-z]&#39;</span><span class="w"> </span><span class="s1">&#39;[A-Z]&#39;</span><span class="sb">`</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">#</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># benutze die ersten 5 Zeichen für die Suche</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nv">lookup</span><span class="o">=</span><span class="si">${</span><span class="nv">hash</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">5</span><span class="si">}</span>
@@ -895,7 +901,7 @@ speichern:</p>
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nv">rest</span><span class="o">=</span><span class="si">${</span><span class="nv">hash</span><span class="p">:</span><span class="nv">5</span><span class="si">}</span>
 </code></pre></div>
 <p>Der HTTP Get Request kann in der Shell folgendermaßen erzeugt werden:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl --tlsv1.3 --silent -o ./checkPassword.bash.txt https://api.pwnedpasswords.com/range/7C4A8
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>--tlsv1.3<span class="w"> </span>--silent<span class="w"> </span>-o<span class="w"> </span>./checkPassword.bash.txt<span class="w"> </span>https://api.pwnedpasswords.com/range/7C4A8
 </code></pre></div>
 <p>Hier die Bedeutung der verwendeten curl Optionen:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>--tlsv1.3    : verwende das TLS 1.3 Protokoll
@@ -906,24 +912,24 @@ speichern:</p>
 <p>Zuerst wird dann geprüft, ob es den vom Passwort gebildet Resthash in der Datei gibt.
 Ist der Exit Code der grep Suche ungleich 0, gabe es keinen Treffer. Gibt es einen 
 Treffer, wird die Trefferanzahl mit einem sed Aufruf aus der Zeile herausgeholt.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>grep <span class="si">${</span><span class="nv">rest</span><span class="si">}</span> ./checkPassword.bash.txt &gt;/dev/null
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>grep<span class="w"> </span><span class="si">${</span><span class="nv">rest</span><span class="si">}</span><span class="w"> </span>./checkPassword.bash.txt<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">then</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;./checkPassword.bash.: password not found&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;./checkPassword.bash.: password not found&quot;</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">else</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="nb">echo</span> -n <span class="s2">&quot;./checkPassword.bash: number of hits : &quot;</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    grep <span class="si">${</span><span class="nv">rest</span><span class="si">}</span> ./checkPassword.bash.txt <span class="p">|</span> sed -e <span class="s1">&#39;s/^.*://&#39;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;./checkPassword.bash: number of hits : &quot;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span>grep<span class="w"> </span><span class="si">${</span><span class="nv">rest</span><span class="si">}</span><span class="w"> </span>./checkPassword.bash.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/^.*://&#39;</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">fi</span>
 </code></pre></div>
 <h3 id="bespielaufrufe">Bespielaufrufe</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$ ./checkPassword.bash <span class="m">123456</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>checkPassword.bash: number of hits : <span class="m">37359195</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>$ ./checkPassword.bash geheim
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>checkPassword.bash: number of hits : <span class="m">46130</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>$ ./checkPassword.bash secret
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>checkPassword.bash: number of hits : <span class="m">352091</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>$ ./checkPassword.bash DasSuperGeheimePassword
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>checkPassword.bash: password not found
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>./checkPassword.bash<span class="w"> </span><span class="m">123456</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>checkPassword.bash:<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>hits<span class="w"> </span>:<span class="w"> </span><span class="m">37359195</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>$<span class="w"> </span>./checkPassword.bash<span class="w"> </span>geheim
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>checkPassword.bash:<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>hits<span class="w"> </span>:<span class="w"> </span><span class="m">46130</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>$<span class="w"> </span>./checkPassword.bash<span class="w"> </span>secret
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>checkPassword.bash:<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>hits<span class="w"> </span>:<span class="w"> </span><span class="m">352091</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>$<span class="w"> </span>./checkPassword.bash<span class="w"> </span>DasSuperGeheimePassword
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>checkPassword.bash:<span class="w"> </span>password<span class="w"> </span>not<span class="w"> </span>found
 </code></pre></div>
 
   <hr>
@@ -951,48 +957,12 @@ Treffer, wird die Trefferanzahl mit einem sed Aufruf aus der Zeile herausgeholt.
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
-      
-        
-        <a href="date_samples.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: date Kommando" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Zurück
-              </span>
-              date Kommando
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../info/about.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Über" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Weiter
-              </span>
-              Über
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright (c) 2022 <a href="https://github.com/maroph">Manfred Rosenboom</a>
+      Copyright (c) 2022-2023 <a href="https://github.com/maroph">Manfred Rosenboom</a>
     </div>
   
   
@@ -1012,12 +982,11 @@ Treffer, wird die Trefferanzahl mit einem sed Aufruf aus der Zeile herausgeholt.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>

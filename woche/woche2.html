@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/woche/woche2.html">
       
+      
+        <link rel="prev" href="woche1.html">
+      
+      
+        <link rel="next" href="../samples/index.html">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -124,6 +129,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -893,10 +900,9 @@
                 
                   
 
-  <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/woche/woche2.md" title="Seite editieren" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="woche-2">Woche 2</h1>
@@ -931,29 +937,29 @@ an stdin Eingabe des Nachfolgers weitergeleitet.</p>
 <p>Ergänzend kann man in der Shell noch folgendes nutzen: nach dem Starten eines 
 Kommandos/Prozesses im Hintergrund kann man sich seine Prozess ID (pid) über die 
 Variable $! holen.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sleep <span class="m">100</span> <span class="p">&amp;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sleep<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="p">&amp;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">bgpid</span><span class="o">=</span><span class="nv">$!</span>
 </code></pre></div>
 <p>Die PID des laufenden Shell Prozesses bekommt man über die Variable $$. Wenn man auf 
 das Ende eine Hintergrundprozesses warten will, geht das über das Kommando wait</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">wait</span> <span class="nv">$bgpid</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">wait</span><span class="w"> </span><span class="nv">$bgpid</span>
 </code></pre></div>
 <p>Wie erkenne ich, das ein Prozess ein Hintergrundprozesse meiner Shell ist?<br />
 Die PPID (Parent PID) des Hintergrundprozesses verweist auf die PID meines Shell
 Prozesses.</p>
 <p>Jetzt alles zusammen:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sleep <span class="m">3</span> <span class="p">&amp;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sleep<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">&amp;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">bgpid</span><span class="o">=</span><span class="nv">$!</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">echo</span> <span class="s2">&quot;pid   : </span><span class="nv">$$</span><span class="s2">&quot;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">echo</span> <span class="s2">&quot;bgpid : </span><span class="nv">$bgpid</span><span class="s2">&quot;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ps -opid,ppid,cmd
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">echo</span> <span class="s2">&quot;----------&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;pid   : </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bgpid : </span><span class="nv">$bgpid</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ps<span class="w"> </span>-opid,ppid,cmd
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;----------&quot;</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">#</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">wait</span> <span class="nv">$bgpid</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>ps -opid,ppid,cmd
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">echo</span> <span class="s2">&quot;----------&quot;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">wait</span><span class="w"> </span><span class="nv">$bgpid</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>ps<span class="w"> </span>-opid,ppid,cmd
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;----------&quot;</span>
 </code></pre></div>
 <p>Die Ausgabe sieht dann im Wesentlichen so aus (die Prozesse oberhalb von -bash 
 habe ich aus der Liste gelöscht):</p>
@@ -983,14 +989,14 @@ dieses Wertes die Abarbeitung der Verkettung steuern.</p>
 Kommandos in der Shell mit der Variablen $? abgefragt werden. Dabei bedeutet 0 ein
 erfolgreiches Ende des Kommandos und ungleich 0, das ein Fehler im Ablauf des
 Kommandos aufgetreten ist.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ ls
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>ls
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>week1-dir
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$ <span class="nb">echo</span> <span class="nv">$?</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="m">0</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ ls unbekannteDatei
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ls: cannot access <span class="s1">&#39;unbekannteDatei&#39;</span>: No such file or directory
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$ <span class="nb">echo</span> <span class="nv">$?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>ls<span class="w"> </span>unbekannteDatei
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ls:<span class="w"> </span>cannot<span class="w"> </span>access<span class="w"> </span><span class="s1">&#39;unbekannteDatei&#39;</span>:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="m">2</span>
 </code></pre></div>
 <h3 id="kommandos-bis-zum-ersten-fehler-ausfuhren">Kommandos bis zum ersten Fehler ausführen</h3>
@@ -999,7 +1005,7 @@ Kommandos aufgetreten ist.</p>
 <p>Die Kommandos werden nacheinander ausgeführt, bis ein Fehler in einem Kommando
 auftritt.</p>
 <p>Beispiel:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls datei1 <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;wird nur angezeigt, wenn es datei1 gibt&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls<span class="w"> </span>datei1<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;wird nur angezeigt, wenn es datei1 gibt&quot;</span>
 </code></pre></div>
 <h3 id="kommandos-bis-zum-ersten-erfolg-ausfuhren">Kommandos bis zum ersten Erfolg ausführen</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>kommando_1 || kommando_2 || ... || kommando_n
@@ -1007,7 +1013,7 @@ auftritt.</p>
 <p>Die Kommandos werden nacheinander ausgeführt, bis das erste Kommando erfolgreich
 ausgeführt wurde.</p>
 <p>Beispiel:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ls datei1 <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;wird nur angezeigt, wenn es datei1 nicht gibt&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ls<span class="w"> </span>datei1<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;wird nur angezeigt, wenn es datei1 nicht gibt&quot;</span>
 </code></pre></div>
 <h3 id="kommandos-verketten_1">Kommandos verketten</h3>
 <p>Mit dem Zeichen ; können Kommandos verkettet werden</p>
@@ -1021,11 +1027,11 @@ oder nicht.</p>
 werden an alle Subprozesse der Shell vererbt. Ein Subprozess ist ein Prozess, der
 von der aktuellen Shell gestartet wurde. Eine Variable wird zu einer
 Environmentvariablen, indem man sie mit <em>export</em> deklariert:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">export</span> <span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
 </code></pre></div>
 <p>Oder auch länger:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">ENV_VARIABLE</span><span class="o">=</span><span class="s2">&quot;Hallo&quot;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">export</span> ENV_VARIABLE
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">export</span><span class="w"> </span>ENV_VARIABLE
 </code></pre></div>
 <p>All derzeit deklarierten Environmentvariablen kann man sich mit dem folgenden
 Kommando ausgeben lassen:</p>
@@ -1041,13 +1047,13 @@ Kommando ausgeben lassen:</p>
 </ul>
 <h3 id="alias-unalias">alias / unalias</h3>
 <p>Mit <em>alias</em> kann man sich ein eigenes Kommando builden.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">alias</span> <span class="nv">bilder</span><span class="o">=</span><span class="s1">&#39;cd $HOME/Bilder;pwd&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">bilder</span><span class="o">=</span><span class="s1">&#39;cd $HOME/Bilder;pwd&#39;</span>
 </code></pre></div>
 <p>Gibt man <em>ll</em> ein, wird das Kommando <em>ls -l</em> ausgeführt. Gibt man bilder ein, wird
 die Kommandoverkettung <em>cd $HOME/Bilder;pwd</em> ausgeführt.</p>
 <p>Mit <em>unalias</em> kann man ein vorher erzeugtes Alias läschen.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">unalias</span> ll
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">unalias</span><span class="w"> </span>ll
 </code></pre></div>
 <p>Gibt man nur <em>alias</em> ein, werden alle deklarierten Aliases angezeigt.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">alias</span>
@@ -1094,48 +1100,12 @@ abgelegt.</p>
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
-      
-        
-        <a href="woche1.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Woche1" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Zurück
-              </span>
-              Woche1
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../samples/index.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Beispiele" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Weiter
-              </span>
-              Beispiele
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright (c) 2022 <a href="https://github.com/maroph">Manfred Rosenboom</a>
+      Copyright (c) 2022-2023 <a href="https://github.com/maroph">Manfred Rosenboom</a>
     </div>
   
   
@@ -1155,12 +1125,11 @@ abgelegt.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>

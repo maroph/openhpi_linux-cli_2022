@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://maroph.github.io/openhpi_linux-cli_2022/samples/bash_assoziative_arrays.html">
       
+      
+        <link rel="prev" href="bash_arrays.html">
+      
+      
+        <link rel="next" href="bash_functions.html">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -124,6 +129,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -883,61 +890,60 @@
                 
                   
 
-  <a href="https://github.com/maroph/openhpi_linux-cli_2022/blob/main/docs-src/samples/bash_assoziative_arrays.md" title="Seite editieren" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="bash-assoziative-arrays">Bash: Assoziative Arrays</h1>
 <h2 id="anlegen-eines-arrays">Anlegen eines Arrays</h2>
 <h3 id="anlegen-eines-leeren-arrays">Anlegen eines leeren Arrays</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">declare</span> -A aArray
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span>aArray
 </code></pre></div>
 <h3 id="anlegen-eines-vorbelegten-arrays">Anlegen eines vorbelegten Arrays</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">declare</span> -A <span class="nv">aArrayPre</span><span class="o">=(</span> <span class="o">[</span>key1<span class="o">]=</span>val1 <span class="o">[</span>key2<span class="o">]=</span>val2 <span class="o">[</span>key3<span class="o">]=</span>val3 <span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span><span class="nv">aArrayPre</span><span class="o">=(</span><span class="w"> </span><span class="o">[</span>key1<span class="o">]=</span>val1<span class="w"> </span><span class="o">[</span>key2<span class="o">]=</span>val2<span class="w"> </span><span class="o">[</span>key3<span class="o">]=</span>val3<span class="w"> </span><span class="o">)</span>
 </code></pre></div>
 <h2 id="keyvalue-paare-zu-einem-array-hinzufugen">Key/Value Paare zu einem Array hinzufügen</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>aArray<span class="o">[</span><span class="s2">&quot;key1&quot;</span><span class="o">]=</span><span class="s2">&quot;value1&quot;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>aArray<span class="o">[</span><span class="s2">&quot;key2&quot;</span><span class="o">]=</span><span class="s2">&quot;value2&quot;</span>
 </code></pre></div>
 <h2 id="zugriff-auf-ein-element-mit-dem-schlussel-key">Zugriff auf ein Element mit dem Schlüssel (key)</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aArray</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aArray</span><span class="p">[</span><span class="s2">&quot;key2&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">aArray</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">aArray</span><span class="p">[</span><span class="s2">&quot;key2&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="lange-eines-arrays">Länge eines Arrays</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span> <span class="s2">&quot;Länge des Arrays aArray : </span><span class="si">${#</span><span class="nv">aArray</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Länge des Arrays aArray : </span><span class="si">${#</span><span class="nv">aArray</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h2 id="iteration-uber-den-schlussel-key">Iteration über den Schlüssel (key)</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span> key <span class="k">in</span> <span class="s2">&quot;</span><span class="si">${</span><span class="p">!aArray[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span><span class="w"> </span>key<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="p">!aArray[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">do</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;key : </span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="nb">echo</span> <span class="s2">&quot;key : </span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="s2"> , value: </span><span class="si">${</span><span class="nv">aArray</span><span class="p">[</span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;key : </span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;key : </span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="s2"> , value: </span><span class="si">${</span><span class="nv">aArray</span><span class="p">[</span><span class="si">${</span><span class="nv">key</span><span class="si">}</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">done</span>
 </code></pre></div>
 <h2 id="iteration-uber-den-wert-value">Iteration über den Wert (value)</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> value <span class="k">in</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">aArray</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span><span class="w"> </span>value<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">aArray</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">do</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;value: </span><span class="si">${</span><span class="nv">value</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;value: </span><span class="si">${</span><span class="nv">value</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">done</span>
 </code></pre></div>
 <h2 id="prufen-ob-ein-schlussel-key-im-array-enthalten-ist">Prüfen, ob ein Schlüssel (key) im Array enthalten ist</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">aArray</span><span class="p">[key1]+_</span><span class="si">}</span> <span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="si">${</span><span class="nv">aArray</span><span class="p">[key1]+_</span><span class="si">}</span><span class="w"> </span><span class="o">]</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">then</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;key1 gefunden&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;key1 gefunden&quot;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">fi</span>
 </code></pre></div>
 <h2 id="prufen-ob-ein-schlussel-key-im-array-nicht-enthalten-ist">Prüfen, ob ein Schlüssel (key) im Array nicht enthalten ist</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span> <span class="o">[</span> ! <span class="si">${</span><span class="nv">aArray</span><span class="p">[keyNONE]+_</span><span class="si">}</span> <span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span><span class="si">${</span><span class="nv">aArray</span><span class="p">[keyNONE]+_</span><span class="si">}</span><span class="w"> </span><span class="o">]</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">then</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="nb">echo</span> <span class="s2">&quot;keyNONE nicht gefunden&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;keyNONE nicht gefunden&quot;</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">fi</span>
 </code></pre></div>
 <h2 id="loschen-eines-schlussels-aus-einem-array">Löschen eines Schlüssels aus einem Array</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">unset</span> aArray<span class="o">[</span>key1<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">unset</span><span class="w"> </span>aArray<span class="o">[</span>key1<span class="o">]</span>
 </code></pre></div>
 <h2 id="loschen-eines-arrays">Löschen eines Arrays</h2>
-<h2 id="unset-aarray"><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">unset</span> aArray
+<h2 id="unset-aarray"><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">unset</span><span class="w"> </span>aArray
 </code></pre></div></h2>
 <p>Ein Skript, dass alle hier beschriebene Operationen ausführt, findet man hier:
 <a href="https://raw.githubusercontent.com/maroph/openhpi_linux-cli_2022/main/samples/bash_aArrays.bash">bash_aArrays.bash</a></p>
@@ -967,48 +973,12 @@
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
-      
-        
-        <a href="bash_arrays.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Bash Arrays" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Zurück
-              </span>
-              Bash Arrays
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="bash_functions.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Bash Funktionen" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Weiter
-              </span>
-              Bash Funktionen
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright (c) 2022 <a href="https://github.com/maroph">Manfred Rosenboom</a>
+      Copyright (c) 2022-2023 <a href="https://github.com/maroph">Manfred Rosenboom</a>
     </div>
   
   
@@ -1028,12 +998,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.config.lang": "de", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Suche", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version.title": "Version ausw\u00e4hlen"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
-    
     
   </body>
 </html>
